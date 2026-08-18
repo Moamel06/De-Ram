@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menukaart | De Ram Scherpenheuvel</title>
+    <meta name="description" content="Bekijk de uitgebreide menukaart van Restaurant De Ram. Geniet van authentieke Belgische hoofdgerechten, diverse croques, Brusselse wafels en speciaalbieren.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo" id="navLogo">
+                    <img src="assets/logo.png" alt="De Ram Logo" class="logo-img">
+                    De <span>Ram</span>
+                </a>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" id="linkHome">Home</a></li>
+                    <li><a href="menu.html" class="active" id="linkMenu">Menukaart</a></li>
+                    <li><a href="about.html" id="linkAbout">Over Ons</a></li>
+                    <li><a href="contact.html" id="linkContact">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menu openen">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner" style="background-image: url('assets/hero_food.png');" id="menuBanner">
+        <div class="banner-content">
+            <h1 class="banner-title font-heading">Onze Menukaart</h1>
+            <div class="banner-breadcrumbs">
+                <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Menukaart</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section" id="menuSection">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle text-accent">Culinaire Traditie</span>
+                <h2 class="section-title font-heading font-serif">Ambachtelijke Brasseriegerechten</h2>
+                <p class="section-desc">Al onze gerechten worden met zorg en passie in eigen keuken bereid. Wij serveren royale porties, vergezeld van verse salades en echte goudgele Belgische frieten.</p>
+            </div>
+
+            <!-- Interactive Filters -->
+            <div class="menu-filter-container reveal">
+                <button class="filter-btn active" data-filter="all" id="filterAll">Alles</button>
+                <button class="filter-btn" data-filter="mains" id="filterMains">Klassieke Gerechten</button>
+                <button class="filter-btn" data-filter="snacks" id="filterSnacks">Snacks & Croques</button>
+                <button class="filter-btn" data-filter="desserts" id="filterDesserts">Wafels & Desserts</button>
+                <button class="filter-btn" data-filter="drinks" id="filterDrinks">Bieren & Dranken</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid reveal">
+                
+                <!-- Category: Mains -->
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Vlaams Stoofvlees</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 18,50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Koninginnenhapje (Vol-au-vent)</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 19,00</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Belgische Steak Frites</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 24,50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Kipfilet Paddenstoelenroom</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 17,50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Gegratineerd Witloof in de Oven</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 16,50</span>
+                    </div>
+                </div>
+
+                <!-- Category: Snacks -->
+                <div class="menu-item" data-category="snacks">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Croque Monsieur</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 9,00</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="snacks">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Croque Madame</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 10,50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="snacks">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Croque Hawaï</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 10,00</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="snacks">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Broodje Gerookte Zalm</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 11,50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="snacks">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Portie Gemengd Warm (12 stuks)</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 12,00</span>
+                    </div>
+                </div>
+
+                <!-- Category: Desserts -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Brusselse Wafel met Aardbeien</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 7,50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Ambachtelijke Pannenkoeken (2 st.)</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 6,50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Dame Blanche</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 8,00</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Warme Appeltaart met IJs</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 7,00</span>
+                    </div>
+                </div>
+
+                <!-- Category: Drinks -->
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Westmalle Tripel (9,5%)</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 4,80</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Duvel (8,5%)</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 4,50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Orval (6,2%)</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 5,00</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Stella Artois van 't Vat (5,2%)</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 3,20</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Huiswijnen (Glas / Karaf)</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">€ 4,20 / € 16,00</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-inner">
+                        <span class="menu-item-name font-heading">Koffie & Warme Dranken</span>
+                        <span class="menu-item-dots"></span>
+                        <span class="menu-item-price font-heading">v.a. € 2,80</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <div class="logo footer-logo">
+                        <img src="assets/logo.png" alt="De Ram Logo" class="logo-img">
+                        De <span>Ram</span>
+                    </div>
+                    <p class="footer-desc">Een warme, familiale brasserie in hartje Scherpenheuvel waar u kunt genieten van échte Belgische smaken en gulle porties.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/pages/De-Ram/152076358186743" target="_blank" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Navigatie</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menukaart</a></li>
+                        <li><a href="about.html">Over Ons</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Onze Keuken</h4>
+                    <ul class="footer-links">
+                        <li><a href="menu.html?filter=mains">Klassieke Hoofdgerechten</a></li>
+                        <li><a href="menu.html?filter=snacks">Snacks & Croques</a></li>
+                        <li><a href="menu.html?filter=drinks">Speciaalbieren</a></li>
+                        <li><a href="menu.html?filter=desserts">Wafels & Desserts</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact & Info</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-location-dot"></i>
+                            <span>Albertusplein 9, 3270 Scherpenheuvel</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+32 13 77 14 95</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-calendar"></i>
+                            <span>Vrijdag sluitingsdag</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Restaurant De Ram. Alle rechten voorbehouden.</p>
+                <p>Website ontworpen & ontwikkeld door <a href="https://studiotm.be/" target="_blank" rel="noopener noreferrer" class="text-accent" style="font-weight: 600;">TM Studio</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
