@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menukaart | De Ram Scherpenheuvel</title>
+    <meta name="description" content="Bekijk de uitgebreide menukaart van Restaurant De Ram. Geniet van authentieke Belgische hoofdgerechten, diverse croques, Brusselse wafels en speciaalbieren.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo" id="navLogo">
+                    <img src="assets/logo.png" alt="De Ram Logo" class="logo-img">
+                    De <span>Ram</span>
+                </a>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" id="linkHome">Home</a></li>
+                    <li><a href="menu.html" class="active" id="linkMenu">Menukaart</a></li>
+                    <li><a href="about.html" id="linkAbout">Over Ons</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menu openen">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner" style="background-image: url('assets/hero_food.png');" id="menuBanner">
+        <div class="banner-content">
+            <h1 class="banner-title font-heading">Onze Menukaart</h1>
+            <div class="banner-breadcrumbs">
+                <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Menukaart</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section" id="menuSection">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle text-accent">Culinaire Traditie</span>
+                <h2 class="section-title font-heading font-serif">Ambachtelijke Brasseriegerechten</h2>
+                <p class="section-desc">Al onze gerechten worden met zorg en passie in eigen keuken bereid. Wij serveren royale porties, vergezeld van verse salades en echte goudgele Belgische frieten.</p>
+            </div>
+
+            <!-- Interactive Filters -->
+            <div class="menu-filter-container reveal">
+                <button class="filter-btn active" data-filter="all" id="filterAll">Alles</button>
+                <button class="filter-btn" data-filter="mains" id="filterMains">Klassieke Gerechten</button>
+                <button class="filter-btn" data-filter="snacks" id="filterSnacks">Snacks & Croques</button>
+                <button class="filter-btn" data-filter="desserts" id="filterDesserts">Wafels & Desserts</button>
+                <button class="filter-btn" data-filter="drinks" id="filterDrinks">Bieren & Dranken</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid reveal">
+                
+                <!-- Category: Mains -->
+                <div class="menu-item" data-category="mains">
+                    <img src="assets/hero_food.png" alt="Vlaams Stoofvlees" class="menu-item-img">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Vlaams Stoofvlees</h4>
+                            <span class="menu-item-price">€ 18,50</span>
+                        </div>
+                        <p class="menu-item-desc">Mals rundvlees urenlang zacht gegaard in donker Belgisch abdijbier met uien en kruiden, geserveerd met een vers slaatje en krokante frietjes.</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-chef">Huisgemaakt</span>
+                            <span class="badge badge-local">Populair</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <img src="assets/restaurant_interior.png" alt="Koninginnenhapje (Vol-au-vent)" class="menu-item-img" style="object-position: center 30%;">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Koninginnenhapje (Vol-au-vent)</h4>
+                            <span class="menu-item-price">€ 19,00</span>
+                        </div>
+                        <p class="menu-item-desc">Klassieke, romige kippenragout met bospaddenstoelen en gehaktballetjes in een knapperig bladerdeegpasteitje, geserveerd met frietjes.</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-chef">Huisgemaakt</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <img src="assets/hero_food.png" alt="Belgische Steak" class="menu-item-img" style="filter: hue-rotate(15deg);">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Belgische Steak Frites</h4>
+                            <span class="menu-item-price">€ 24,50</span>
+                        </div>
+                        <p class="menu-item-desc">Mals gegrild rundvlees (sirloin) geserveerd met een frisse gemengde salade, goudgele frieten en saus naar keuze (peperroom, champignon of provençaal).</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-chef">Chef's Special</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <img src="assets/restaurant_interior.png" alt="Kipfilet met Paddenstoelenroom" class="menu-item-img">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Kipfilet Paddenstoelenroom</h4>
+                            <span class="menu-item-price">€ 17,50</span>
+                        </div>
+                        <p class="menu-item-desc">Sappig gebakken kipfilet overgoten met een rijke bospaddenstoelenroomsaus, vergezeld van warme groenten en krokante kroketjes of frietjes.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <img src="assets/hero_food.png" alt="Gegratineerd Witloof" class="menu-item-img" style="filter: saturate(0.6);">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Gegratineerd Witloof in de Oven</h4>
+                            <span class="menu-item-price">€ 16,50</span>
+                        </div>
+                        <p class="menu-item-desc">Belgisch witloof gerold in ambachtelijke achterham, overgoten met een romige kaas-bechamelsaus en in de oven gegratineerd, geserveerd met zachte puree.</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-chef">Klassieker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Snacks -->
+                <div class="menu-item" data-category="snacks">
+                    <img src="assets/dessert_drinks.png" alt="Croque Monsieur" class="menu-item-img" style="object-position: center 30%;">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Croque Monsieur</h4>
+                            <span class="menu-item-price">€ 9,00</span>
+                        </div>
+                        <p class="menu-item-desc">Klassieke dubbele tosti met ham en jonge kaas, geserveerd met een vers garnituurtje en ketchup.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="snacks">
+                    <img src="assets/dessert_drinks.png" alt="Croque Madame" class="menu-item-img">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Croque Madame</h4>
+                            <span class="menu-item-price">€ 10,50</span>
+                        </div>
+                        <p class="menu-item-desc">Onze klassieke croque monsieur, maar dan afgewerkt met een perfect gebakken spiegelei erbovenop.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="snacks">
+                    <img src="assets/dessert_drinks.png" alt="Croque Hawaï" class="menu-item-img" style="filter: brightness(1.1);">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Croque Hawaï</h4>
+                            <span class="menu-item-price">€ 10,00</span>
+                        </div>
+                        <p class="menu-item-desc">Dubbele tosti met ham, gesmolten kaas en een schijf zoete ananas voor een frisse, zomerse toets.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="snacks">
+                    <img src="assets/hero_food.png" alt="Broodje Gerookte Zalm" class="menu-item-img" style="filter: hue-rotate(90deg) saturate(0.8);">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Broodje Gerookte Zalm</h4>
+                            <span class="menu-item-price">€ 11,50</span>
+                        </div>
+                        <p class="menu-item-desc">Krokant afgebakken broodje belegd met gerookte zalm, romige kruidenkaas, rode ui, kappertjes en frisse rucola.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="snacks">
+                    <img src="assets/dessert_drinks.png" alt="Portie Warm Gemengd" class="menu-item-img" style="filter: contrast(1.1);">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Portie Gemengd Warm (12 stuks)</h4>
+                            <span class="menu-item-price">€ 12,00</span>
+                        </div>
+                        <p class="menu-item-desc">Een selectie van warme minisnacks (bitterballen, kipnuggets, miniloempia's) geserveerd met mosterd en zoetzure saus.</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-local">Ideaal bij bier</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Desserts -->
+                <div class="menu-item" data-category="desserts">
+                    <img src="assets/dessert_drinks.png" alt="Brusselse Wafel" class="menu-item-img">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Brusselse Wafel met Aardbeien</h4>
+                            <span class="menu-item-price">€ 7,50</span>
+                        </div>
+                        <p class="menu-item-desc">Versgebakken, vederlichte en krokante Brusselse wafel, rijkelijk belegd met verse aardbeien, poedersuiker en ambachtelijke slagroom.</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-chef">Huisgemaakt</span>
+                            <span class="badge badge-local">Populair</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <img src="assets/dessert_drinks.png" alt="Pannenkoeken" class="menu-item-img" style="filter: brightness(0.9) sepia(0.2);">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Ambachtelijke Pannenkoeken (2 st.)</h4>
+                            <span class="menu-item-price">€ 6,50</span>
+                        </div>
+                        <p class="menu-item-desc">Twee grote, flinterdunne pannenkoeken, warm geserveerd met kandijsuiker (kinnekessuiker), witte suiker of Luikse stroop.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <img src="assets/restaurant_interior.png" alt="Dame Blanche" class="menu-item-img" style="filter: brightness(0.7) hue-rotate(50deg);">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Dame Blanche</h4>
+                            <span class="menu-item-price">€ 8,00</span>
+                        </div>
+                        <p class="menu-item-desc">Drie bollen romig vanille-ijs overgoten met warme, echte chocoladesaus, afgewerkt met een toef slagroom.</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-chef">Favoriet</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <img src="assets/dessert_drinks.png" alt="Warme Appeltaart" class="menu-item-img" style="filter: saturate(0.5) brightness(1.2);">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Warme Appeltaart met IJs</h4>
+                            <span class="menu-item-price">€ 7,00</span>
+                        </div>
+                        <p class="menu-item-desc">Huisgemaakte appeltaart met rozijnen en kaneel, warm geserveerd met een bolletje vanille-ijs en slagroom.</p>
+                    </div>
+                </div>
+
+                <!-- Category: Drinks -->
+                <div class="menu-item" data-category="drinks">
+                    <img src="assets/dessert_drinks.png" alt="Belgische Speciaalbieren" class="menu-item-img" style="object-position: 80% center;">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Westmalle Tripel (9,5%)</h4>
+                            <span class="menu-item-price">€ 4,80</span>
+                        </div>
+                        <p class="menu-item-desc">Klassiek trappistenbier, goudgeel van kleur met een fruitige geur en een mooie, droge bitterheid.</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-local">Trappist</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks">
+                    <img src="assets/dessert_drinks.png" alt="Duvel" class="menu-item-img" style="object-position: 70% center; filter: hue-rotate(20deg);">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Duvel (8,5%)</h4>
+                            <span class="menu-item-price">€ 4,50</span>
+                        </div>
+                        <p class="menu-item-desc">Klassiek zwaar blond bier met een fijne pareling, een stevige schuimkraag en een subtiel hopkarakter.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks">
+                    <img src="assets/dessert_drinks.png" alt="Orval" class="menu-item-img" style="object-position: 90% center; filter: grayscale(0.2);">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Orval (6,2%)</h4>
+                            <span class="menu-item-price">€ 5,00</span>
+                        </div>
+                        <p class="menu-item-desc">Authentieke trappist met een complex, hop-bitter en licht zurig smaakprofiel. Uitstekend gerijpt.</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-local">Trappist</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks">
+                    <img src="assets/dessert_drinks.png" alt="Stella Artois" class="menu-item-img" style="object-position: 60% center; filter: saturate(0.5) brightness(1.2);">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Stella Artois van 't Vat (5,2%)</h4>
+                            <span class="menu-item-price">€ 3,20</span>
+                        </div>
+                        <p class="menu-item-desc">Heerlijk verfrissende Belgische pilsener, vakkundig getapt met een mooie schuimkraag (33cl).</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-chef">Van 't Vat</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks">
+                    <img src="assets/restaurant_interior.png" alt="Huiswijn en frisdrank" class="menu-item-img" style="filter: brightness(0.8) hue-rotate(120deg);">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Huiswijnen (Glas / Karaf)</h4>
+                            <span class="menu-item-price">€ 4,20 / € 16,00</span>
+                        </div>
+                        <p class="menu-item-desc">Keuze uit een fruitige witte wijn, een soepele rode wijn of een frisse rosé, speciaal door ons geselecteerd.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks">
+                    <img src="assets/restaurant_interior.png" alt="Koffie" class="menu-item-img" style="filter: sepia(0.8) brightness(0.8);">
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h4 class="font-heading">Koffie & Warme Dranken</h4>
+                            <span class="menu-item-price">v.a. € 2,80</span>
+                        </div>
+                        <p class="menu-item-desc">Vers gezette espresso, romige cappuccino, latte macchiato of een selectie van diverse kwaliteitstheeën.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <div class="logo footer-logo">
+                        <img src="assets/logo.png" alt="De Ram Logo" class="logo-img">
+                        De <span>Ram</span>
+                    </div>
+                    <p class="footer-desc">Een warme, familiale brasserie in hartje Scherpenheuvel waar u kunt genieten van échte Belgische smaken en gulle porties.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/pages/De-Ram/152076358186743" target="_blank" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Navigatie</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menukaart</a></li>
+                        <li><a href="about.html">Over Ons</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Onze Keuken</h4>
+                    <ul class="footer-links">
+                        <li><a href="menu.html?filter=mains">Klassieke Hoofdgerechten</a></li>
+                        <li><a href="menu.html?filter=snacks">Snacks & Croques</a></li>
+                        <li><a href="menu.html?filter=drinks">Speciaalbieren</a></li>
+                        <li><a href="menu.html?filter=desserts">Wafels & Desserts</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact & Info</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-location-dot"></i>
+                            <span>Albertusplein 9, 3270 Scherpenheuvel</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+32 13 77 14 95</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-calendar"></i>
+                            <span>Vrijdag sluitingsdag</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Restaurant De Ram. Alle rechten voorbehouden.</p>
+                <p>Designed with <i class="fas fa-heart text-accent" style="font-size: 0.8rem;"></i> for De Ram</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Ram | Klassiek Belgisch Restaurant & Brasserie Scherpenheuvel</title>
+    <meta name="description" content="Welkom bij Restaurant De Ram in Scherpenheuvel. Geniet van onze klassieke Belgische keuken, royale porties stoofvlees, vol-au-vent en heerlijke wafels op ons gezellig terras.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo" id="navLogo">
+                    <img src="assets/logo.png" alt="De Ram Logo" class="logo-img">
+                    De <span>Ram</span>
+                </a>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="active" id="linkHome">Home</a></li>
+                    <li><a href="menu.html" id="linkMenu">Menukaart</a></li>
+                    <li><a href="about.html" id="linkAbout">Over Ons</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menu openen">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('assets/hero_food.png');" id="heroSection">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-subtitle text-accent">Brasserie & Restaurant</span>
+                <h1 class="hero-title font-heading">Klassiek Belgisch <span>Genieten</span></h1>
+                <p class="hero-desc">Gelegen op het sfeervolle Albertusplein in Scherpenheuvel. Kom langs en proef onze legendarische familierecepten in een authentiek, gezellig kader.</p>
+                <div class="hero-btns">
+                    <a href="menu.html" class="btn btn-primary" id="heroMenuBtn">Bekijk Onze Kaart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="featuresSection">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle text-accent">Welkom bij De Ram</span>
+                <h2 class="section-title font-heading">Waarom Onze Gasten Terugkomen</h2>
+                <p class="section-desc">Al jarenlang een gevestigde waarde in Scherpenheuvel voor gezinnen, groepen en pelgrims op zoek naar pure Belgische smaken.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card reveal" style="transition-delay: 0.1s;">
+                    <div class="feature-icon"><i class="fas fa-utensils"></i></div>
+                    <h3 class="feature-title font-heading">Klassieke Keuken</h3>
+                    <p>Onze chef-kok bereidt met trots klassieke Vlaamse toppers, van ambachtelijk stoofvlees en vol-au-vent tot versgebakken Brusselse wafels.</p>
+                </div>
+
+                <div class="feature-card reveal" style="transition-delay: 0.2s;">
+                    <div class="feature-icon"><i class="fas fa-users"></i></div>
+                    <h3 class="feature-title font-heading">Familiale Sfeer</h3>
+                    <p>Een warme, informele ontvangst waarbij iedereen zich meteen thuis voelt. Perfect voor gezellige familiemomenten of een gezellige avond met vrienden.</p>
+                </div>
+
+                <div class="feature-card reveal" style="transition-delay: 0.3s;">
+                    <div class="feature-icon"><i class="fas fa-beer-mug-empty"></i></div>
+                    <h3 class="feature-title font-heading">Belgische Bieren</h3>
+                    <p>Onze uitgebreide drankenkaart bevat een fijne selectie aan speciaalbieren die perfect passen bij onze hartige brasseriegerechten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specials / Teaser Section -->
+    <section class="section" style="background-color: var(--bg-secondary);" id="specialsSection">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle text-accent">Onze Aanraders</span>
+                <h2 class="section-title font-heading">Specialiteiten van het Huis</h2>
+                <p class="section-desc">Een greep uit onze meest geliefde gerechten. Vers en met zorg bereid volgens familietraditie.</p>
+            </div>
+
+            <div class="specials-grid">
+                <!-- Special 1 -->
+                <div class="special-card reveal" style="transition-delay: 0.1s;">
+                    <div class="special-img-wrapper">
+                        <img src="assets/hero_food.png" alt="Klassiek Stoofvlees">
+                        <span class="special-tag">Klassieker</span>
+                    </div>
+                    <div class="special-body">
+                        <div class="special-header">
+                            <h3 class="special-title font-heading">Vlaams Stoofvlees</h3>
+                            <span class="special-price">€ 18,50</span>
+                        </div>
+                        <p>Zacht gegaard rundvlees in een rijke saus van donker abdijbier, geserveerd met een vers slaatje en onze goudgele Belgische frieten.</p>
+                        <a href="menu.html" class="text-accent font-heading" style="font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">Volledig Menu <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i></a>
+                    </div>
+                </div>
+
+                <!-- Special 2 -->
+                <div class="special-card reveal" style="transition-delay: 0.2s;">
+                    <div class="special-img-wrapper">
+                        <img src="assets/restaurant_interior.png" alt="Gegrilde Steak Frites" style="object-position: center 30%;">
+                        <span class="special-tag">Chef's Keuze</span>
+                    </div>
+                    <div class="special-body">
+                        <div class="special-header">
+                            <h3 class="special-title font-heading">Belgische Steak Frites</h3>
+                            <span class="special-price">€ 24,50</span>
+                        </div>
+                        <p>Malse steak van de grill, geserveerd met een frisse salade en saus naar keuze (champignonroom, peperroom, provençaal of kruidenboter).</p>
+                        <a href="menu.html" class="text-accent font-heading" style="font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">Volledig Menu <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i></a>
+                    </div>
+                </div>
+
+                <!-- Special 3 -->
+                <div class="special-card reveal" style="transition-delay: 0.3s;">
+                    <div class="special-img-wrapper">
+                        <img src="assets/dessert_drinks.png" alt="Brusselse Wafel">
+                        <span class="special-tag">Zoete Zonde</span>
+                    </div>
+                    <div class="special-body">
+                        <div class="special-header">
+                            <h3 class="special-title font-heading">Brusselse Wafel</h3>
+                            <span class="special-price">€ 7,50</span>
+                        </div>
+                        <p>Luchtige, krokante wafel, warm geserveerd met verse aardbeien, een toef slagroom en poedersuiker. Heerlijk bij de koffie.</p>
+                        <a href="menu.html" class="text-accent font-heading" style="font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">Volledig Menu <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo split banner -->
+    <section class="section" id="promoSection">
+        <div class="container">
+            <div class="promo-split reveal">
+                <div class="promo-info">
+                    <span class="text-accent font-heading" style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 10px;">Gezelligheid Troef</span>
+                    <h3 class="font-heading">Zonnig Terras & Groepsontvangsten</h3>
+                    <p>Op zonnige dagen is het heerlijk toeven op ons ruime terras met uitzicht op het gezellige plein. Bovendien is Restaurant De Ram uitstekend uitgerust om grotere groepen, busreizen en familiefeestjes te ontvangen met op maat gemaakte groepsmenu's.</p>
+                    <div>
+                        <a href="about.html" class="btn btn-primary" id="promoAboutBtn">Lees Meer Over Ons</a>
+                    </div>
+                </div>
+                <div class="promo-image" style="background-image: url('assets/restaurant_interior.png');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section (Hours & Address) -->
+    <section class="section info-section" id="infoSection">
+        <div class="container">
+            <div class="info-columns">
+                <div class="info-details reveal">
+                    <span class="section-subtitle text-accent">Contact & Locatie</span>
+                    <h2 class="font-heading">Gemakkelijk bereikbaar in het centrum</h2>
+                    <p>Gelegen aan het sfeervolle Albertusplein, vlak bij de beroemde Basiliek van Onze-Lieve-Vrouw van Scherpenheuvel. Er is parkeergelegenheid in de directe omgeving.</p>
+                    
+                    <div class="info-list">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-location-dot"></i></div>
+                            <div class="info-text">
+                                <h4>Adres</h4>
+                                <p>Albertusplein 9, 3270 Scherpenheuvel</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-phone"></i></div>
+                            <div class="info-text">
+                                <h4>Telefoonnummer</h4>
+                                <p>+32 13 77 14 95</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-wallet"></i></div>
+                            <div class="info-text">
+                                <h4>Betalingsinfo</h4>
+                                <p>Wij accepteren cash en Payconiq.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://www.google.com/maps/place/De+Ram/@50.9797084,4.9744621,710m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47c1412f7ce0e7e5:0xe4428aa9a03508ab!8m2!3d50.9797051!4d4.977037!16s%2Fg%2F1v4k5nr5" target="_blank" class="btn btn-secondary" id="mapsLinkBtn"><i class="fa-solid fa-map-location-dot" style="margin-right: 8px;"></i> Routebeschrijving</a>
+                </div>
+
+                <div class="hours-table reveal" style="transition-delay: 0.2s;">
+                    <h3 class="font-heading text-accent">Openingsuren</h3>
+                    
+                    <div class="hours-row">
+                        <span>Maandag</span>
+                        <span>11:30 - 22:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span>Dinsdag</span>
+                        <span>11:30 - 22:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span>Woensdag</span>
+                        <span>11:30 - 22:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span>Donderdag</span>
+                        <span>11:30 - 22:00</span>
+                    </div>
+                    <div class="hours-row closed">
+                        <span>Vrijdag</span>
+                        <span>Gesloten</span>
+                    </div>
+                    <div class="hours-row">
+                        <span>Zaterdag</span>
+                        <span>11:30 - 23:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span>Zondag</span>
+                        <span>11:30 - 22:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <div class="logo footer-logo">
+                        <img src="assets/logo.png" alt="De Ram Logo" class="logo-img">
+                        De <span>Ram</span>
+                    </div>
+                    <p class="footer-desc">Een warme, familiale brasserie in hartje Scherpenheuvel waar u kunt genieten van échte Belgische smaken en gulle porties.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/pages/De-Ram/152076358186743" target="_blank" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Navigatie</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menukaart</a></li>
+                        <li><a href="about.html">Over Ons</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Onze Keuken</h4>
+                    <ul class="footer-links">
+                        <li><a href="menu.html?filter=mains">Klassieke Hoofdgerechten</a></li>
+                        <li><a href="menu.html?filter=snacks">Snacks & Croques</a></li>
+                        <li><a href="menu.html?filter=drinks">Speciaalbieren</a></li>
+                        <li><a href="menu.html?filter=desserts">Wafels & Desserts</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact & Info</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-location-dot"></i>
+                            <span>Albertusplein 9, 3270 Scherpenheuvel</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+32 13 77 14 95</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-calendar"></i>
+                            <span>Vrijdag sluitingsdag</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Restaurant De Ram. Alle rechten voorbehouden.</p>
+                <p>Designed with <i class="fas fa-heart text-accent" style="font-size: 0.8rem;"></i> for De Ram</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
