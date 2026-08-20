@@ -798,6 +798,40 @@ header.scrolled .navbar {
     border: 1px solid rgba(52, 152, 219, 0.3);
 }
 
+/* Menu sub-section titles (e.g. "Bieren", "Frisdranken" within Dranken) */
+.menu-section-title {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0 -10px;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.menu-section-title:first-of-type {
+    margin-top: 0;
+}
+
+.menu-section-title:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.menu-section-title h3 {
+    font-size: 1.3rem;
+    white-space: nowrap;
+    color: var(--accent);
+}
+
+.menu-section-title .menu-section-line {
+    flex-grow: 1;
+    height: 1px;
+    background: var(--glass-border);
+}
+
 /* Footer styling */
 footer {
     background-color: #050507;
