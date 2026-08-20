@@ -78,14 +78,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Check URL parameter for pre-filtering
         const urlParams = new URLSearchParams(window.location.search);
-        const filterParam = urlParams.get('filter');
+        let filterParam = urlParams.get('filter');
         if (filterParam) {
+            // Map legacy aliases
+            if (filterParam === 'mains') filterParam = 'warm';
+            if (filterParam === 'drinks') filterParam = 'dranken';
+
             const targetBtn = Array.from(filterButtons).find(btn => btn.getAttribute('data-filter') === filterParam);
             if (targetBtn) {
-                // We click it with a slight delay to allow smooth page entry
                 setTimeout(() => {
                     targetBtn.click();
-                }, 100);
+                }, 50);
             }
         }
     }
@@ -101,8 +104,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0,
+            rootMargin: '0px 0px 50px 0px'
         });
 
         reveals.forEach(el => revealObserver.observe(el));
