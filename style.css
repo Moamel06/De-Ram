@@ -419,6 +419,104 @@ header.scrolled .navbar {
     transform: scaleX(1);
 }
 
+/* Dedicated Parking Showcase Banner */
+.parking-banner {
+    background: linear-gradient(145deg, rgba(26, 26, 34, 0.85), rgba(15, 15, 19, 0.95));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-md);
+    padding: 32px;
+    margin-bottom: 30px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.parking-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.parking-banner:hover {
+    border-color: rgba(var(--accent-rgb), 0.3);
+    box-shadow: var(--glass-shadow);
+}
+
+.parking-banner-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.parking-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.parking-card {
+    background: rgba(18, 18, 22, 0.65);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-sm);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: var(--transition);
+}
+
+.parking-card:hover {
+    background: rgba(var(--accent-rgb), 0.08);
+    border-color: rgba(var(--accent-rgb), 0.4);
+    transform: translateY(-2px);
+}
+
+.parking-card i {
+    color: var(--accent);
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.parking-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.parking-info strong {
+    color: var(--text-primary);
+    font-size: 0.98rem;
+    font-weight: 600;
+}
+
+.parking-info span {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.features-grid.three-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 992px) {
+    .parking-grid {
+        grid-template-columns: 1fr;
+    }
+    .features-grid.three-cols {
+        grid-template-columns: 1fr;
+    }
+    .parking-banner-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
+
 .feature-icon {
     font-size: 2.5rem;
     color: var(--accent);
@@ -719,7 +817,7 @@ header.scrolled .navbar {
     background: linear-gradient(145deg, rgba(26, 26, 34, 0.85), rgba(15, 15, 19, 0.95));
     border: 1px solid var(--glass-border);
     border-radius: var(--border-radius-md);
-    padding: 22px 28px;
+    padding: 20px 26px;
     display: flex;
     align-items: center;
     transition: var(--transition);
@@ -769,16 +867,18 @@ header.scrolled .navbar {
     justify-content: space-between;
     width: 100%;
     gap: 8px;
-    font-size: 1.15rem;
 }
 
 .menu-item-title h4 {
     order: 1;
-    font-family: var(--font-heading);
-    font-size: 1.15rem;
+    font-family: var(--font-body);
+    font-size: 1.05rem;
     font-weight: 600;
-    color: var(--text-primary);
+    color: #ffffff;
     margin: 0;
+    line-height: 1.4;
+    letter-spacing: 0.15px;
+    -webkit-font-smoothing: antialiased;
 }
 
 .menu-item-title::after {
@@ -794,18 +894,19 @@ header.scrolled .navbar {
 
 .menu-item-price {
     order: 3;
+    font-family: var(--font-body);
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     color: var(--accent);
-    font-family: var(--font-heading);
     white-space: nowrap;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
 }
 
 .menu-item-desc {
     color: var(--text-secondary);
     font-size: 0.9rem;
     margin-bottom: 12px;
+    font-family: var(--font-body);
 }
 
 .menu-item-badges {
@@ -840,19 +941,21 @@ header.scrolled .navbar {
     border: 1px solid rgba(52, 152, 219, 0.3);
 }
 
-/* Menu sub-section titles (e.g. "Bieren", "Frisdranken" within Dranken) */
+/* Menu sub-section titles */
 .menu-section-title {
     grid-column: 1 / -1;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 15px;
-    margin: 10px 0 -10px;
+    margin: 18px 0 -6px;
     padding: 0;
     background: none;
     border: none;
     box-shadow: none;
 }
 
+.menu-section-title::before,
 .menu-section-title::after {
     display: none !important;
 }
@@ -867,15 +970,161 @@ header.scrolled .navbar {
 }
 
 .menu-section-title h3 {
-    font-size: 1.3rem;
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
     white-space: nowrap;
     color: var(--accent);
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.menu-section-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(var(--accent-rgb), 0.12);
+    color: var(--accent);
+    border: 1px solid rgba(var(--accent-rgb), 0.35);
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 3px 12px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
 }
 
 .menu-section-title .menu-section-line {
     flex-grow: 1;
     height: 1px;
     background: var(--glass-border);
+    min-width: 40px;
+}
+
+/* 3-Column Meat Trio Layout */
+.menu-trio-container {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 0;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow: visible;
+}
+
+.menu-trio-container::before {
+    display: none !important;
+}
+
+.menu-trio-container:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.menu-trio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    width: 100%;
+}
+
+.menu-trio-col {
+    background: linear-gradient(145deg, rgba(26, 26, 34, 0.85), rgba(15, 15, 19, 0.95));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-md);
+    padding: 24px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-trio-col::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), #b89224);
+    opacity: 0.8;
+}
+
+.menu-trio-col:hover {
+    transform: translateY(-4px);
+    border-color: rgba(var(--accent-rgb), 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(var(--accent-rgb), 0.12);
+}
+
+.menu-trio-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(var(--accent-rgb), 0.2);
+}
+
+.menu-trio-header i {
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+.menu-trio-header h4 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.menu-trio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex-grow: 1;
+}
+
+.menu-trio-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.menu-trio-name {
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.35;
+    flex-shrink: 1;
+}
+
+.menu-trio-dots {
+    flex-grow: 1;
+    border-bottom: 1px dashed rgba(var(--accent-rgb), 0.3);
+    margin: 0 4px;
+    min-width: 12px;
+    position: relative;
+    top: 2px;
+}
+
+.menu-trio-price {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--accent);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+@media (max-width: 992px) {
+    .menu-trio-grid {
+        grid-template-columns: 1fr;
+    }
 }
 /* Footer styling */
 footer {
@@ -1453,6 +1702,40 @@ textarea {
         width: 100%;
         height: 180px;
     }
+/* Parking list on Contact page */
+.parking-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.parking-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.9rem;
+    line-height: 1.35;
+}
+
+.parking-item i {
+    color: var(--accent);
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.parking-item strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.parking-item small {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.82rem;
 }
 
 /* ============================================
