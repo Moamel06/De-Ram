@@ -15,6 +15,17 @@
 </head>
 <body>
 
+    <!-- Announcement Banner (hidden until data loads) -->
+    <div id="announcementBanner" class="announcement-banner" style="display: none;" role="alert">
+        <div class="announcement-inner">
+            <div class="announcement-content">
+                <strong id="announcementTitle" class="announcement-title"></strong>
+                <span id="announcementDesc" class="announcement-desc"></span>
+            </div>
+            <button id="announcementDismiss" class="announcement-dismiss" aria-label="Sluiten">&times;</button>
+        </div>
+    </div>
+
     <!-- Header / Navbar -->
     <header>
         <div class="container">
@@ -426,5 +437,6 @@
 
     <!-- Custom JS -->
     <script src="app.js"></script>
+    <script src="announcement.js"></script>
 </body>
 </html>

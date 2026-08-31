@@ -1454,3 +1454,113 @@ textarea {
         height: 180px;
     }
 }
+
+/* ============================================
+   Announcement Banner
+   ============================================ */
+.announcement-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    background: linear-gradient(135deg, var(--accent), #b8962e);
+    color: var(--bg-primary);
+    font-family: var(--font-body);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.announcement-banner.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.announcement-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 24px;
+}
+
+.announcement-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.announcement-title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--bg-primary);
+}
+
+.announcement-desc {
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.85;
+    color: var(--bg-primary);
+}
+
+.announcement-dismiss {
+    flex-shrink: 0;
+    background: transparent;
+    border: 2px solid rgba(10, 10, 12, 0.25);
+    color: var(--bg-primary);
+    font-size: 1.25rem;
+    line-height: 1;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.announcement-dismiss:hover {
+    background: rgba(10, 10, 12, 0.15);
+    border-color: rgba(10, 10, 12, 0.4);
+}
+
+/* Push header down when banner is visible */
+body.has-announcement header {
+    top: 48px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .announcement-inner {
+        padding: 10px 16px;
+        gap: 10px;
+    }
+
+    .announcement-content {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .announcement-title {
+        font-size: 0.9rem;
+    }
+
+    .announcement-desc {
+        font-size: 0.8rem;
+    }
+
+    body.has-announcement header {
+        top: 56px;
+    }
+}
