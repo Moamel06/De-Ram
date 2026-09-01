@@ -244,6 +244,39 @@ header.scrolled .navbar {
     cursor: pointer;
 }
 
+/* Language switcher */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid var(--glass-border);
+    border-radius: 50px;
+    padding: 4px;
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.lang-btn:hover {
+    color: var(--text-primary);
+}
+
+.lang-btn.active {
+    background: var(--accent);
+    color: var(--bg-primary);
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -780,7 +813,106 @@ header.scrolled .navbar {
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.menu-info-trigger-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.menu-info-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 1px dashed rgba(var(--accent-rgb), 0.5);
+    color: var(--accent);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.menu-info-btn:hover {
+    background: rgba(var(--accent-rgb), 0.1);
+    border-color: var(--accent);
+}
+
+.menu-info-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.menu-info-modal[hidden] {
+    display: none;
+}
+
+.menu-info-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 5, 7, 0.75);
+    backdrop-filter: blur(3px);
+}
+
+.menu-info-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    max-height: 85vh;
+    overflow-y: auto;
+    background: linear-gradient(145deg, rgba(26, 26, 34, 0.98), rgba(15, 15, 19, 0.98));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-md);
+    padding: 34px 30px;
+    box-shadow: var(--glass-shadow);
+}
+
+.menu-info-modal-content h3 {
+    color: var(--accent);
+    font-size: 1.4rem;
+    margin: 0 0 10px;
+}
+
+.menu-info-modal-desc {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    margin: 0 0 16px;
+    line-height: 1.6;
+}
+
+.menu-info-modal-note {
+    font-family: var(--font-heading);
+    color: var(--accent);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 26px 0 0;
+}
+
+.menu-info-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.menu-info-modal-close:hover {
+    color: var(--accent);
 }
 
 .filter-btn {
@@ -999,6 +1131,46 @@ header.scrolled .navbar {
     height: 1px;
     background: var(--glass-border);
     min-width: 40px;
+}
+
+/* Sauzen naar keuze info box */
+.menu-sauzen-box {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.menu-sauzen-box:hover {
+    transform: none;
+}
+
+.menu-sauzen-box h4 {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0;
+    letter-spacing: 0.3px;
+}
+
+.menu-sauzen-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.menu-sauzen-tag {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: rgba(var(--accent-rgb), 0.1);
+    border: 1px solid rgba(var(--accent-rgb), 0.3);
+    border-radius: 50px;
+    padding: 5px 14px;
+    white-space: nowrap;
 }
 
 /* 3-Column Meat Trio Layout */
@@ -1613,7 +1785,7 @@ textarea {
     }
     
     .nav-actions {
-        display: none;
+        display: flex;
     }
     
     .hero-title {

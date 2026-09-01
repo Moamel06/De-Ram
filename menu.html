@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menukaart | De Ram Scherpenheuvel</title>
-    <meta name="description" content="Bekijk de uitgebreide menukaart van Restaurant De Ram. Geniet van authentieke Belgische hoofdgerechten, diverse croques, Brusselse wafels en speciaalbieren.">
+    <title data-i18n="meta.menu.title">Menukaart | De Ram Scherpenheuvel</title>
+    <meta name="description" data-i18n="meta.menu.description" content="Bekijk de uitgebreide menukaart van Restaurant De Ram. Geniet van authentieke Belgische hoofdgerechten, diverse croques, Brusselse wafels en speciaalbieren.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,13 +36,19 @@
                 </a>
                 
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="index.html" id="linkHome">Home</a></li>
-                    <li><a href="menu.html" class="active" id="linkMenu">Menukaart</a></li>
-                    <li><a href="about.html" id="linkAbout">Over Ons</a></li>
-                    <li><a href="contact.html" id="linkContact">Contact</a></li>
+                    <li><a href="index.html" id="linkHome" data-i18n="nav.home">Home</a></li>
+                    <li><a href="menu.html" class="active" id="linkMenu" data-i18n="nav.menu">Menukaart</a></li>
+                    <li><a href="about.html" id="linkAbout" data-i18n="nav.about">Over Ons</a></li>
+                    <li><a href="contact.html" id="linkContact" data-i18n="nav.contact">Contact</a></li>
                 </ul>
 
                 <div class="nav-actions">
+                    <div class="lang-switcher" id="langSwitcher">
+                        <button class="lang-btn active" data-lang="nl">NL</button>
+                        <button class="lang-btn" data-lang="fr">FR</button>
+                        <button class="lang-btn" data-lang="de">DE</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
                     <button class="menu-toggle" id="menuToggle" aria-label="Menu openen">
                         <i class="fas fa-bars"></i>
                     </button>
@@ -54,9 +60,9 @@
     <!-- Page Banner -->
     <section class="page-banner" style="background-image: url('assets/hero_food.png');" id="menuBanner">
         <div class="banner-content">
-            <h1 class="banner-title font-heading">Onze Menukaart</h1>
+            <h1 class="banner-title font-heading" data-i18n="menu.banner.title">Onze Menukaart</h1>
             <div class="banner-breadcrumbs">
-                <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Menukaart</span>
+                <a href="index.html" data-i18n="nav.home">Home</a> &nbsp;/&nbsp; <span data-i18n="menu.breadcrumb.current">Menukaart</span>
             </div>
         </div>
     </section>
@@ -65,83 +71,104 @@
     <section class="section" id="menuSection">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-subtitle text-accent">Culinaire Traditie</span>
-                <h2 class="section-title font-heading font-serif">Ambachtelijke Brasseriegerechten</h2>
-                <p class="section-desc">Al onze gerechten worden met zorg en passie in eigen keuken bereid. Wij serveren royale porties, vergezeld van verse salades en echte goudgele Belgische frieten.</p>
+                <span class="section-subtitle text-accent" data-i18n="menu.section.subtitle">Culinaire Traditie</span>
+                <h2 class="section-title font-heading font-serif" data-i18n="menu.section.title">Ambachtelijke Brasseriegerechten</h2>
+                <p class="section-desc" data-i18n="menu.section.desc">Al onze gerechten worden met zorg en passie in eigen keuken bereid. Wij serveren royale porties, vergezeld van verse salades en echte goudgele Belgische frieten.</p>
             </div>
 
             <!-- Interactive Filters -->
             <div class="menu-filter-container reveal">
-                <button class="filter-btn active" data-filter="all" id="filterAll">Alles</button>
-                <button class="filter-btn" data-filter="voorgerechten" id="filterVoorgerechten">Voorgerechten</button>
-                <button class="filter-btn" data-filter="warm" id="filterWarm">Warme Schotels</button>
-                <button class="filter-btn" data-filter="vis" id="filterVis">Vis</button>
-                <button class="filter-btn" data-filter="koud" id="filterKoud">Koud &amp; Salades</button>
-                <button class="filter-btn" data-filter="pasta" id="filterPasta">Pasta</button>
-                <button class="filter-btn" data-filter="kinderen" id="filterKinderen">Kinderen</button>
-                <button class="filter-btn" data-filter="snacks" id="filterSnacks">Snacks</button>
-                <button class="filter-btn" data-filter="broodjes" id="filterBroodjes">Broodjes</button>
-                <button class="filter-btn" data-filter="menus" id="filterMenus">Menu's</button>
-                <button class="filter-btn" data-filter="dranken" id="filterDranken">Dranken</button>
-                <button class="filter-btn" data-filter="desserts" id="filterDesserts">Desserts</button>
+                <button class="filter-btn active" data-filter="all" id="filterAll" data-i18n="menu.filter.all">Alles</button>
+                <button class="filter-btn" data-filter="voorgerechten" id="filterVoorgerechten" data-i18n="menu.filter.voorgerechten">Voorgerechten</button>
+                <button class="filter-btn" data-filter="warm" id="filterWarm" data-i18n="menu.filter.warm">Warme Schotels</button>
+                <button class="filter-btn" data-filter="vis" id="filterVis" data-i18n="menu.filter.vis">Vis</button>
+                <button class="filter-btn" data-filter="koud" id="filterKoud" data-i18n="menu.filter.koud">Koud &amp; Salades</button>
+                <button class="filter-btn" data-filter="pasta" id="filterPasta" data-i18n="menu.filter.pasta">Pasta</button>
+                <button class="filter-btn" data-filter="kinderen" id="filterKinderen" data-i18n="menu.filter.kinderen">Kinderen</button>
+                <button class="filter-btn" data-filter="snacks" id="filterSnacks" data-i18n="menu.filter.snacks">Snacks</button>
+                <button class="filter-btn" data-filter="broodjes" id="filterBroodjes" data-i18n="menu.filter.broodjes">Broodjes</button>
+                <button class="filter-btn" data-filter="menus" id="filterMenus" data-i18n="menu.filter.menus">Menu's</button>
+                <button class="filter-btn" data-filter="dranken" id="filterDranken" data-i18n="menu.filter.dranken">Dranken</button>
+                <button class="filter-btn" data-filter="desserts" id="filterDesserts" data-i18n="menu.filter.desserts">Desserts</button>
+            </div>
+
+            <!-- Sauzen & extra's info -->
+            <div class="menu-info-trigger-row reveal">
+                <button class="menu-info-btn" id="menuInfoBtn" type="button" aria-haspopup="dialog" aria-controls="menuInfoModal">
+                    <i class="fas fa-circle-info"></i> <span data-i18n="menu.info.btn">Sauzen &amp; extra's</span>
+                </button>
+            </div>
+
+            <div class="menu-info-modal" id="menuInfoModal" hidden>
+                <div class="menu-info-modal-backdrop" id="menuInfoBackdrop"></div>
+                <div class="menu-info-modal-content" role="dialog" aria-modal="true" aria-labelledby="menuInfoTitle">
+                    <button class="menu-info-modal-close" id="menuInfoClose" type="button" aria-label="Sluiten">&times;</button>
+                    <h3 id="menuInfoTitle" class="font-heading" data-i18n="menu.sauzen.title">Sauzen naar keuze</h3>
+                    <p class="menu-info-modal-desc" data-i18n="menu.info.sauzen_desc">Bij sommige gerechten kan je kiezen uit onderstaande sauzen:</p>
+                    <div class="menu-sauzen-tags"><span class="menu-sauzen-tag" data-i18n="menu.sauzen.champignonroom">Champignonroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.peperroom">peperroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.provencaal">proven&ccedil;aal</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.curry">curry</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.tomatenroom">tomatenroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.diabolique">diabolique</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.bearnaise">b&eacute;arnaise</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.mosterd">mosterd</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.lookroom">lookroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.lookboter">lookboter</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.champignonwijn">champignonwijn</span></div>
+                    <p class="menu-info-modal-note" data-i18n="menu.note.included">Frieten, kroketten, puree, rijst of brood inbegrepen</p>
+                    <p class="menu-info-modal-desc" data-i18n="menu.info.included_desc">Bij bepaalde gerechten is dit inbegrepen — dit wordt telkens vermeld wanneer je op een specifieke categorie filtert.</p>
+                </div>
             </div>
 
             <!-- Menu Grid -->
             <div class="menu-grid">
 
                 <!-- Category: Voorgerechten -->
-                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Soep</h4><span class="menu-item-price">€ 4,50</span></div></div></div>
-                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Russisch ei</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
-                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Koninginnenhapje</h4><span class="menu-item-price">€ 11,00</span></div></div></div>
-                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Kaaskroket (1)</h4><span class="menu-item-price">€ 8,00</span></div></div></div>
-                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Garnaalkroket (1)</h4><span class="menu-item-price">€ 10,00</span></div></div></div>
-                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Kaaskroketten (2)</h4><span class="menu-item-price">€ 13,00</span></div></div></div>
-                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Duo van kaas- en garnaalkroket</h4><span class="menu-item-price">€ 15,00</span></div></div></div>
-                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Garnaalkroketten (2)</h4><span class="menu-item-price">€ 17,00</span></div></div></div>
-                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Vispasteitje</h4><span class="menu-item-price">€ 13,00</span></div></div></div>
-                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Gerookte zalmschotel</h4><span class="menu-item-price">€ 14,00</span></div></div></div>
-                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Tomaat garnaal</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
-                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Scampi (5)</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
+                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.soep">Soep</h4><span class="menu-item-price">€ 4,50</span></div></div></div>
+                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.russisch_ei">Russisch ei</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
+                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.koninginnenhapje">Koninginnenhapje</h4><span class="menu-item-price">€ 11,00</span></div></div></div>
+                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.kaaskroket_1">Kaaskroket (1)</h4><span class="menu-item-price">€ 8,00</span></div></div></div>
+                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.garnaalkroket_1">Garnaalkroket (1)</h4><span class="menu-item-price">€ 10,00</span></div></div></div>
+                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.kaaskroketten_2">Kaaskroketten (2)</h4><span class="menu-item-price">€ 13,00</span></div></div></div>
+                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.duo_van_kaas_en_garnaalkroket">Duo van kaas- en garnaalkroket</h4><span class="menu-item-price">€ 15,00</span></div></div></div>
+                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.garnaalkroketten_2">Garnaalkroketten (2)</h4><span class="menu-item-price">€ 17,00</span></div></div></div>
+                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.vispasteitje">Vispasteitje</h4><span class="menu-item-price">€ 13,00</span></div></div></div>
+                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.gerookte_zalmschotel">Gerookte zalmschotel</h4><span class="menu-item-price">€ 14,00</span></div></div></div>
+                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.tomaat_garnaal">Tomaat garnaal</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
+                <div class="menu-item" data-category="voorgerechten"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.scampi_5">Scampi (5)</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
 
                 <!-- Category: Warme Schotels -->
-                <div class="menu-item menu-section-title" data-category="warm"><h3 class="font-heading">Omeletten</h3><span class="menu-section-line"></span></div>
-                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Omelet natuur</h4><span class="menu-item-price">€ 12,00</span></div></div></div>
-                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Omelet hesp</h4><span class="menu-item-price">€ 14,00</span></div></div></div>
-                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Omelet tomaat</h4><span class="menu-item-price">€ 14,00</span></div></div></div>
-                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Omelet champignon</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
-                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Omelet garnaal</h4><span class="menu-item-price">€ 19,00</span></div></div></div>
+                <div class="menu-item menu-section-title" data-category="warm"><h3 class="font-heading" data-i18n="menu.subsection.omeletten">Omeletten</h3><span class="menu-section-badge menu-note-badge" data-i18n="menu.note.included">Frieten, kroketten, puree, rijst of brood inbegrepen</span><span class="menu-section-line"></span></div>
+                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.omelet_natuur">Omelet natuur</h4><span class="menu-item-price">€ 12,00</span></div></div></div>
+                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.omelet_hesp">Omelet hesp</h4><span class="menu-item-price">€ 14,00</span></div></div></div>
+                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.omelet_tomaat">Omelet tomaat</h4><span class="menu-item-price">€ 14,00</span></div></div></div>
+                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.omelet_champignon">Omelet champignon</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
+                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.omelet_garnaal">Omelet garnaal</h4><span class="menu-item-price">€ 19,00</span></div></div></div>
 
-                <div class="menu-item menu-section-title" data-category="warm"><h3 class="font-heading">Kroketten</h3><span class="menu-section-line"></span></div>
-                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">3 Kaaskroketten</h4><span class="menu-item-price">€ 20,00</span></div></div></div>
-                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">2 Kaas &amp; 1 garnaalkroket</h4><span class="menu-item-price">€ 22,00</span></div></div></div>
-                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">2 Garnaal &amp; 1 kaaskroket</h4><span class="menu-item-price">€ 24,00</span></div></div></div>
-                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">3 Garnaalkroketten</h4><span class="menu-item-price">€ 26,00</span></div></div></div>
+                <div class="menu-item menu-section-title" data-category="warm"><h3 class="font-heading" data-i18n="menu.subsection.kroketten">Kroketten</h3><span class="menu-section-line"></span></div>
+                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.3_kaaskroketten">3 Kaaskroketten</h4><span class="menu-item-price">€ 20,00</span></div></div></div>
+                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.2_kaas_and_1_garnaalkroket">2 Kaas &amp; 1 garnaalkroket</h4><span class="menu-item-price">€ 22,00</span></div></div></div>
+                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.2_garnaal_and_1_kaaskroket">2 Garnaal &amp; 1 kaaskroket</h4><span class="menu-item-price">€ 24,00</span></div></div></div>
+                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.3_garnaalkroketten">3 Garnaalkroketten</h4><span class="menu-item-price">€ 26,00</span></div></div></div>
 
-                <div class="menu-item menu-section-title" data-category="warm"><h3 class="font-heading">Klassieke Schotels</h3><span class="menu-section-line"></span></div>
-                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Bouletten met saus naar keuze</h4><span class="menu-item-price">€ 18,00</span></div></div></div>
-                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Stoofvlees</h4><span class="menu-item-price">€ 18,00</span></div></div></div>
-                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Gegratineerd witloof met ham</h4><span class="menu-item-price">€ 21,00</span></div></div></div>
-                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Koninginnenhapje</h4><span class="menu-item-price">€ 21,00</span></div></div></div>
-                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Kalkoenrollade met saus naar keuze</h4><span class="menu-item-price">€ 21,00</span></div></div></div>
-                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Ossentong met champignons in madeirasaus of saus naar keuze</h4><span class="menu-item-price">€ 21,00</span></div></div></div>
+                <div class="menu-item menu-section-title" data-category="warm"><h3 class="font-heading" data-i18n="menu.subsection.klassieke_schotels">Klassieke Schotels</h3><span class="menu-section-line"></span></div>
+                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.bouletten_met_saus_naar_keuze">Bouletten met saus naar keuze</h4><span class="menu-item-price">€ 18,00</span></div></div></div>
+                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.stoofvlees">Stoofvlees</h4><span class="menu-item-price">€ 18,00</span></div></div></div>
+                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.gegratineerd_witloof_met_ham">Gegratineerd witloof met ham</h4><span class="menu-item-price">€ 21,00</span></div></div></div>
+                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.koninginnenhapje">Koninginnenhapje</h4><span class="menu-item-price">€ 21,00</span></div></div></div>
+                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.kalkoenrollade_met_saus_naar_keuze">Kalkoenrollade met saus naar keuze</h4><span class="menu-item-price">€ 21,00</span></div></div></div>
+                <div class="menu-item" data-category="warm"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.ossentong_met_champignons_in_madeirasaus_of_saus_naar_keuze">Ossentong met champignons in madeirasaus of saus naar keuze</h4><span class="menu-item-price">€ 21,00</span></div></div></div>
 
-                <div class="menu-item menu-section-title" data-category="warm"><h3 class="font-heading">Kotelet, Kip &amp; Vlees</h3><span class="menu-section-line"></span></div>
+                <div class="menu-item menu-sauzen-box" data-category="warm"><h4 class="font-heading" data-i18n="menu.sauzen.title">Sauzen naar keuze</h4><div class="menu-sauzen-tags"><span class="menu-sauzen-tag" data-i18n="menu.sauzen.champignonroom">Champignonroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.peperroom">peperroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.provencaal">proven&ccedil;aal</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.curry">curry</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.tomatenroom">tomatenroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.diabolique">diabolique</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.bearnaise">b&eacute;arnaise</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.mosterd">mosterd</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.lookroom">lookroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.lookboter">lookboter</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.champignonwijn">champignonwijn</span></div></div>
+
+                <div class="menu-item menu-section-title" data-category="warm"><h3 class="font-heading" data-i18n="menu.subsection.kotelet_kip_vlees">Kotelet, Kip &amp; Vlees</h3><span class="menu-section-line"></span></div>
                 <div class="menu-item menu-trio-container" data-category="warm">
                     <div class="menu-trio-grid">
                         <!-- Kolom 1: Kotelet -->
                         <div class="menu-trio-col">
                             <div class="menu-trio-header">
                                 <i class="fas fa-drumstick-bite"></i>
-                                <h4>Kotelet</h4>
+                                <h4 data-i18n="menu.trio.kotelet">Kotelet</h4>
                             </div>
                             <div class="menu-trio-list">
                                 <div class="menu-trio-row">
-                                    <span class="menu-trio-name">Kotelet natuursaus</span>
+                                    <span class="menu-trio-name" data-i18n="menu.item.kotelet_natuursaus">Kotelet natuursaus</span>
                                     <span class="menu-trio-dots"></span>
                                     <span class="menu-trio-price">€ 21,00</span>
                                 </div>
                                 <div class="menu-trio-row">
-                                    <span class="menu-trio-name">Kotelet met saus naar keuze of sla</span>
+                                    <span class="menu-trio-name" data-i18n="menu.item.kotelet_met_saus_naar_keuze_of_sla">Kotelet met saus naar keuze of sla</span>
                                     <span class="menu-trio-dots"></span>
                                     <span class="menu-trio-price">€ 25,00</span>
                                 </div>
@@ -152,36 +179,36 @@
                         <div class="menu-trio-col">
                             <div class="menu-trio-header">
                                 <i class="fas fa-drumstick-bite"></i>
-                                <h4>Kip</h4>
+                                <h4 data-i18n="menu.trio.kip">Kip</h4>
                             </div>
                             <div class="menu-trio-list">
                                 <div class="menu-trio-row">
-                                    <span class="menu-trio-name">½ Kip natuursaus</span>
+                                    <span class="menu-trio-name" data-i18n="menu.item.1_2_kip_natuursaus">½ Kip natuursaus</span>
                                     <span class="menu-trio-dots"></span>
                                     <span class="menu-trio-price">€ 20,00</span>
                                 </div>
                                 <div class="menu-trio-row">
-                                    <span class="menu-trio-name">½ Kip sla of appelmoes</span>
+                                    <span class="menu-trio-name" data-i18n="menu.item.1_2_kip_sla_of_appelmoes">½ Kip sla of appelmoes</span>
                                     <span class="menu-trio-dots"></span>
                                     <span class="menu-trio-price">€ 24,00</span>
                                 </div>
                                 <div class="menu-trio-row">
-                                    <span class="menu-trio-name">½ Kip met saus naar keuze</span>
+                                    <span class="menu-trio-name" data-i18n="menu.item.1_2_kip_met_saus_naar_keuze">½ Kip met saus naar keuze</span>
                                     <span class="menu-trio-dots"></span>
                                     <span class="menu-trio-price">€ 24,00</span>
                                 </div>
                                 <div class="menu-trio-row">
-                                    <span class="menu-trio-name">Kipfilet natuursaus</span>
+                                    <span class="menu-trio-name" data-i18n="menu.item.kipfilet_natuursaus">Kipfilet natuursaus</span>
                                     <span class="menu-trio-dots"></span>
                                     <span class="menu-trio-price">€ 20,00</span>
                                 </div>
                                 <div class="menu-trio-row">
-                                    <span class="menu-trio-name">Kipfilet sla of appelmoes</span>
+                                    <span class="menu-trio-name" data-i18n="menu.item.kipfilet_sla_of_appelmoes">Kipfilet sla of appelmoes</span>
                                     <span class="menu-trio-dots"></span>
                                     <span class="menu-trio-price">€ 24,00</span>
                                 </div>
                                 <div class="menu-trio-row">
-                                    <span class="menu-trio-name">Kipfilet met saus naar keuze</span>
+                                    <span class="menu-trio-name" data-i18n="menu.item.kipfilet_met_saus_naar_keuze">Kipfilet met saus naar keuze</span>
                                     <span class="menu-trio-dots"></span>
                                     <span class="menu-trio-price">€ 24,00</span>
                                 </div>
@@ -192,26 +219,26 @@
                         <div class="menu-trio-col">
                             <div class="menu-trio-header">
                                 <i class="fas fa-utensils"></i>
-                                <h4>Vlees &amp; Steak</h4>
+                                <h4 data-i18n="menu.trio.vlees_steak">Vlees &amp; Steak</h4>
                             </div>
                             <div class="menu-trio-list">
                                 <div class="menu-trio-row">
-                                    <span class="menu-trio-name">Steak natuursaus (gebakken of gegrild)</span>
+                                    <span class="menu-trio-name" data-i18n="menu.item.steak_natuursaus_gebakken_of_gegrild">Steak natuursaus (gebakken of gegrild)</span>
                                     <span class="menu-trio-dots"></span>
                                     <span class="menu-trio-price">€ 24,00</span>
                                 </div>
                                 <div class="menu-trio-row">
-                                    <span class="menu-trio-name">Steak met saus naar keuze of sla</span>
+                                    <span class="menu-trio-name" data-i18n="menu.item.steak_met_saus_naar_keuze_of_sla">Steak met saus naar keuze of sla</span>
                                     <span class="menu-trio-dots"></span>
                                     <span class="menu-trio-price">€ 28,00</span>
                                 </div>
                                 <div class="menu-trio-row">
-                                    <span class="menu-trio-name">Gegrilde brochetten met saus naar keuze of sla</span>
+                                    <span class="menu-trio-name" data-i18n="menu.item.gegrilde_brochetten_met_saus_naar_keuze_of_sla">Gegrilde brochetten met saus naar keuze of sla</span>
                                     <span class="menu-trio-dots"></span>
                                     <span class="menu-trio-price">€ 28,00</span>
                                 </div>
                                 <div class="menu-trio-row">
-                                    <span class="menu-trio-name">Varkenshaas met saus naar keuze of sla</span>
+                                    <span class="menu-trio-name" data-i18n="menu.item.varkenshaas_met_saus_naar_keuze_of_sla">Varkenshaas met saus naar keuze of sla</span>
                                     <span class="menu-trio-dots"></span>
                                     <span class="menu-trio-price">€ 28,00</span>
                                 </div>
@@ -220,280 +247,291 @@
                     </div>
                 </div>
 
+                <div class="menu-item menu-sauzen-box" data-category="warm"><h4 class="font-heading" data-i18n="menu.sauzen.title">Sauzen naar keuze</h4><div class="menu-sauzen-tags"><span class="menu-sauzen-tag" data-i18n="menu.sauzen.champignonroom">Champignonroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.peperroom">peperroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.provencaal">proven&ccedil;aal</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.curry">curry</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.tomatenroom">tomatenroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.diabolique">diabolique</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.bearnaise">b&eacute;arnaise</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.mosterd">mosterd</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.lookroom">lookroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.lookboter">lookboter</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.champignonwijn">champignonwijn</span></div></div>
+
                 <!-- Category: Vis -->
-                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Mosselen</h4><span class="menu-item-price">Dagprijs</span></div></div></div>
-                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Vispasteitje</h4><span class="menu-item-price">€ 23,00</span></div></div></div>
-                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Forel sla</h4><span class="menu-item-price">€ 23,00</span></div></div></div>
-                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Forel amandelen</h4><span class="menu-item-price">€ 27,00</span></div></div></div>
-                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Gegrilde zalm met saus naar keuze of sla</h4><span class="menu-item-price">€ 24,00</span></div></div></div>
-                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Heilbotfilet met saus naar keuze of salade</h4><span class="menu-item-price">€ 24,00</span></div></div></div>
-                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Gegratineerde witloof met zalm</h4><span class="menu-item-price">€ 24,00</span></div></div></div>
-                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Scampi (9) met saus naar keuze</h4><span class="menu-item-price">€ 26,00</span></div></div></div>
-                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Kabeljauwhaasje met saus naar keuze of sla</h4><span class="menu-item-price">€ 26,00</span></div></div></div>
-                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Gegrilde tonijnsteak met saus naar keuze of sla</h4><span class="menu-item-price">€ 26,00</span></div></div></div>
-                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Zeetong sla (geheel of gefileerd)</h4><span class="menu-item-price">€ 36,00</span></div></div></div>
+                <div class="menu-item menu-section-title menu-note-row" data-category="vis"><span class="menu-section-badge menu-note-badge" data-i18n="menu.note.included">Frieten, kroketten, puree, rijst of brood inbegrepen</span><span class="menu-section-line"></span></div>
+                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.mosselen">Mosselen</h4><span class="menu-item-price" data-i18n="menu.price.dagprijs">Dagprijs</span></div></div></div>
+                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.vispasteitje">Vispasteitje</h4><span class="menu-item-price">€ 23,00</span></div></div></div>
+                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.forel_sla">Forel sla</h4><span class="menu-item-price">€ 23,00</span></div></div></div>
+                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.forel_amandelen">Forel amandelen</h4><span class="menu-item-price">€ 27,00</span></div></div></div>
+                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.gegrilde_zalm_met_saus_naar_keuze_of_sla">Gegrilde zalm met saus naar keuze of sla</h4><span class="menu-item-price">€ 24,00</span></div></div></div>
+                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.heilbotfilet_met_saus_naar_keuze_of_salade">Heilbotfilet met saus naar keuze of salade</h4><span class="menu-item-price">€ 24,00</span></div></div></div>
+                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.gegratineerde_witloof_met_zalm">Gegratineerde witloof met zalm</h4><span class="menu-item-price">€ 24,00</span></div></div></div>
+                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.scampi_9_met_saus_naar_keuze">Scampi (9) met saus naar keuze</h4><span class="menu-item-price">€ 26,00</span></div></div></div>
+                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.kabeljauwhaasje_met_saus_naar_keuze_of_sla">Kabeljauwhaasje met saus naar keuze of sla</h4><span class="menu-item-price">€ 26,00</span></div></div></div>
+                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.gegrilde_tonijnsteak_met_saus_naar_keuze_of_sla">Gegrilde tonijnsteak met saus naar keuze of sla</h4><span class="menu-item-price">€ 26,00</span></div></div></div>
+                <div class="menu-item" data-category="vis"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.zeetong_sla_geheel_of_gefileerd">Zeetong sla (geheel of gefileerd)</h4><span class="menu-item-price">€ 36,00</span></div></div></div>
+
+                <div class="menu-item menu-sauzen-box" data-category="vis"><h4 class="font-heading" data-i18n="menu.sauzen.title">Sauzen naar keuze</h4><div class="menu-sauzen-tags"><span class="menu-sauzen-tag" data-i18n="menu.sauzen.champignonroom">Champignonroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.peperroom">peperroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.provencaal">proven&ccedil;aal</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.curry">curry</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.tomatenroom">tomatenroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.diabolique">diabolique</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.bearnaise">b&eacute;arnaise</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.mosterd">mosterd</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.lookroom">lookroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.lookboter">lookboter</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.champignonwijn">champignonwijn</span></div></div>
 
                 <!-- Category: Koud & Salades -->
-                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Salade scampi (7)</h4><span class="menu-item-price">€ 20,00</span></div></div></div>
-                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Salade gerookte zalm</h4><span class="menu-item-price">€ 22,00</span></div></div></div>
-                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Salade gegrilde tonijnsteak</h4><span class="menu-item-price">€ 24,00</span></div></div></div>
-                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Russisch ei</h4><span class="menu-item-price">€ 17,00</span></div></div></div>
-                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Koude schotel hesp</h4><span class="menu-item-price">€ 18,00</span></div></div></div>
-                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Haringschotel</h4><span class="menu-item-price">€ 18,00</span></div></div></div>
-                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Engelse schotel</h4><span class="menu-item-price">€ 21,00</span></div></div></div>
-                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Filet Américain</h4><span class="menu-item-price">€ 21,00</span></div></div></div>
-                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Gerookte zalmschotel</h4><span class="menu-item-price">€ 23,00</span></div></div></div>
-                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Tomaat garnaal</h4><span class="menu-item-price">€ 23,00</span></div></div></div>
+                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.salade_scampi_7">Salade scampi (7)</h4><span class="menu-item-price">€ 20,00</span></div></div></div>
+                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.salade_gerookte_zalm">Salade gerookte zalm</h4><span class="menu-item-price">€ 22,00</span></div></div></div>
+                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.salade_gegrilde_tonijnsteak">Salade gegrilde tonijnsteak</h4><span class="menu-item-price">€ 24,00</span></div></div></div>
+                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.russisch_ei">Russisch ei</h4><span class="menu-item-price">€ 17,00</span></div></div></div>
+                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.koude_schotel_hesp">Koude schotel hesp</h4><span class="menu-item-price">€ 18,00</span></div></div></div>
+                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.haringschotel">Haringschotel</h4><span class="menu-item-price">€ 18,00</span></div></div></div>
+                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.engelse_schotel">Engelse schotel</h4><span class="menu-item-price">€ 21,00</span></div></div></div>
+                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.filet_americain">Filet Américain</h4><span class="menu-item-price">€ 21,00</span></div></div></div>
+                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.gerookte_zalmschotel">Gerookte zalmschotel</h4><span class="menu-item-price">€ 23,00</span></div></div></div>
+                <div class="menu-item" data-category="koud"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.tomaat_garnaal">Tomaat garnaal</h4><span class="menu-item-price">€ 23,00</span></div></div></div>
 
                 <!-- Category: Pasta -->
-                <div class="menu-item" data-category="pasta"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Spaghetti bolognèse</h4><span class="menu-item-price">€ 18,00</span></div></div></div>
-                <div class="menu-item" data-category="pasta"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Vegetarische pasta</h4><span class="menu-item-price">€ 15,00</span></div></div></div>
-                <div class="menu-item" data-category="pasta"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Gerookte zalm pasta</h4><span class="menu-item-price">€ 22,00</span></div></div></div>
-                <div class="menu-item" data-category="pasta"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Tonijn pasta</h4><span class="menu-item-price">€ 25,00</span></div></div></div>
-                <div class="menu-item" data-category="pasta"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Scampi pasta (9)</h4><span class="menu-item-price">€ 25,00</span></div></div></div>
+                <div class="menu-item" data-category="pasta"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.spaghetti_bolognese">Spaghetti bolognèse</h4><span class="menu-item-price">€ 18,00</span></div></div></div>
+                <div class="menu-item" data-category="pasta"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.vegetarische_pasta">Vegetarische pasta</h4><span class="menu-item-price">€ 15,00</span></div></div></div>
+                <div class="menu-item" data-category="pasta"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.gerookte_zalm_pasta">Gerookte zalm pasta</h4><span class="menu-item-price">€ 22,00</span></div></div></div>
+                <div class="menu-item" data-category="pasta"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.tonijn_pasta">Tonijn pasta</h4><span class="menu-item-price">€ 25,00</span></div></div></div>
+                <div class="menu-item" data-category="pasta"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.scampi_pasta_9">Scampi pasta (9)</h4><span class="menu-item-price">€ 25,00</span></div></div></div>
 
                 <!-- Category: Kinderen -->
-                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Mini spaghetti</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
-                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Kinderspaghetti</h4><span class="menu-item-price">€ 12,00</span></div></div></div>
-                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Curryworst</h4><span class="menu-item-price">€ 10,00</span></div></div></div>
-                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Kippennuggets</h4><span class="menu-item-price">€ 13,00</span></div></div></div>
-                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Fishstick</h4><span class="menu-item-price">€ 13,00</span></div></div></div>
-                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Stoofvlees</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
-                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Bouletten met saus naar keuze</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
-                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">¼ Kip met saus naar keuze of salade</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
-                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Koninginnenhapje</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
-                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Ossentong met saus naar keuze</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
-                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Kalkoenrollade met saus naar keuze</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
-                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Filet Américain</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
-                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Gegratineerd witloof</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
-                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Gegratineerd witloof zalm</h4><span class="menu-item-price">€ 19,00</span></div></div></div>
-                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Steak natuur (150 gr)</h4><span class="menu-item-price">€ 17,00</span></div></div></div>
-                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Steak met saus naar keuze of sla (150 gr)</h4><span class="menu-item-price">€ 21,00</span></div></div></div>
-                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Brochette met saus naar keuze</h4><span class="menu-item-price">€ 19,00</span></div></div></div>
+                <div class="menu-item menu-section-title menu-note-row" data-category="kinderen"><span class="menu-section-badge menu-note-badge" data-i18n="menu.note.included">Frieten, kroketten, puree, rijst of brood inbegrepen</span><span class="menu-section-line"></span></div>
+                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.mini_spaghetti">Mini spaghetti</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
+                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.kinderspaghetti">Kinderspaghetti</h4><span class="menu-item-price">€ 12,00</span></div></div></div>
+                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.curryworst">Curryworst</h4><span class="menu-item-price">€ 10,00</span></div></div></div>
+                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.kippennuggets">Kippennuggets</h4><span class="menu-item-price">€ 13,00</span></div></div></div>
+                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.fishstick">Fishstick</h4><span class="menu-item-price">€ 13,00</span></div></div></div>
+                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.stoofvlees">Stoofvlees</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
+                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.bouletten_met_saus_naar_keuze">Bouletten met saus naar keuze</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
+                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.1_4_kip_met_saus_naar_keuze_of_salade">¼ Kip met saus naar keuze of salade</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
+                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.koninginnenhapje">Koninginnenhapje</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
+                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.ossentong_met_saus_naar_keuze">Ossentong met saus naar keuze</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
+                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.kalkoenrollade_met_saus_naar_keuze">Kalkoenrollade met saus naar keuze</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
+                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.filet_americain">Filet Américain</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
+                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.gegratineerd_witloof">Gegratineerd witloof</h4><span class="menu-item-price">€ 16,00</span></div></div></div>
+                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.gegratineerd_witloof_zalm">Gegratineerd witloof zalm</h4><span class="menu-item-price">€ 19,00</span></div></div></div>
+                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.steak_natuur_150_gr">Steak natuur (150 gr)</h4><span class="menu-item-price">€ 17,00</span></div></div></div>
+                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.steak_met_saus_naar_keuze_of_sla_150_gr">Steak met saus naar keuze of sla (150 gr)</h4><span class="menu-item-price">€ 21,00</span></div></div></div>
+                <div class="menu-item" data-category="kinderen"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.brochette_met_saus_naar_keuze">Brochette met saus naar keuze</h4><span class="menu-item-price">€ 19,00</span></div></div></div>
+
+                <div class="menu-item menu-sauzen-box" data-category="kinderen"><h4 class="font-heading" data-i18n="menu.sauzen.title">Sauzen naar keuze</h4><div class="menu-sauzen-tags"><span class="menu-sauzen-tag" data-i18n="menu.sauzen.champignonroom">Champignonroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.peperroom">peperroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.provencaal">proven&ccedil;aal</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.curry">curry</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.tomatenroom">tomatenroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.diabolique">diabolique</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.bearnaise">b&eacute;arnaise</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.mosterd">mosterd</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.lookroom">lookroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.lookboter">lookboter</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.champignonwijn">champignonwijn</span></div></div>
 
                 <!-- Category: Snacks -->
-                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Croque monsieur</h4><span class="menu-item-price">€ 9,50</span></div></div></div>
-                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Croque madame</h4><span class="menu-item-price">€ 11,50</span></div></div></div>
-                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Croque Hawaï</h4><span class="menu-item-price">€ 13,00</span></div></div></div>
-                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Croque banaan</h4><span class="menu-item-price">€ 13,00</span></div></div></div>
-                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Croque bolognèse</h4><span class="menu-item-price">€ 13,50</span></div></div></div>
-                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Croque vidée</h4><span class="menu-item-price">€ 14,50</span></div></div></div>
-                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Croque gerookte zalm</h4><span class="menu-item-price">€ 15,00</span></div></div></div>
-                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Toast kannibaal</h4><span class="menu-item-price">€ 14,50</span></div></div></div>
-                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Toast champignons</h4><span class="menu-item-price">€ 14,50</span></div></div></div>
-                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Toast kip</h4><span class="menu-item-price">€ 14,50</span></div></div></div>
-                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Uitsmijter</h4><span class="menu-item-price">€ 14,50</span></div></div></div>
-                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Portie frieten</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
+                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.croque_monsieur">Croque monsieur</h4><span class="menu-item-price">€ 9,50</span></div></div></div>
+                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.croque_madame">Croque madame</h4><span class="menu-item-price">€ 11,50</span></div></div></div>
+                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.croque_hawai">Croque Hawaï</h4><span class="menu-item-price">€ 13,00</span></div></div></div>
+                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.croque_banaan">Croque banaan</h4><span class="menu-item-price">€ 13,00</span></div></div></div>
+                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.croque_bolognese">Croque bolognèse</h4><span class="menu-item-price">€ 13,50</span></div></div></div>
+                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.croque_videe">Croque vidée</h4><span class="menu-item-price">€ 14,50</span></div></div></div>
+                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.croque_gerookte_zalm">Croque gerookte zalm</h4><span class="menu-item-price">€ 15,00</span></div></div></div>
+                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.toast_kannibaal">Toast kannibaal</h4><span class="menu-item-price">€ 14,50</span></div></div></div>
+                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.toast_champignons">Toast champignons</h4><span class="menu-item-price">€ 14,50</span></div></div></div>
+                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.toast_kip">Toast kip</h4><span class="menu-item-price">€ 14,50</span></div></div></div>
+                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.uitsmijter">Uitsmijter</h4><span class="menu-item-price">€ 14,50</span></div></div></div>
+                <div class="menu-item" data-category="snacks"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.portie_frieten">Portie frieten</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
 
                 <!-- Category: Broodjes -->
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje</h4><span class="menu-item-price">€ 1,40</span></div></div></div>
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje boter</h4><span class="menu-item-price">€ 2,00</span></div></div></div>
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje konfituur</h4><span class="menu-item-price">€ 2,50</span></div></div></div>
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje Nutella</h4><span class="menu-item-price">€ 2,50</span></div></div></div>
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje kaas</h4><span class="menu-item-price">€ 3,00</span></div></div></div>
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje hesp</h4><span class="menu-item-price">€ 3,00</span></div></div></div>
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje salami</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje vleessla</h4><span class="menu-item-price">€ 3,40</span></div></div></div>
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje américain</h4><span class="menu-item-price">€ 3,40</span></div></div></div>
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje tonijn</h4><span class="menu-item-price">€ 3,40</span></div></div></div>
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje kaas &amp; hesp</h4><span class="menu-item-price">€ 4,00</span></div></div></div>
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje gerookte zalm</h4><span class="menu-item-price">€ 4,20</span></div></div></div>
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje gezond</h4><span class="menu-item-price">€ 4,20</span></div></div></div>
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje gezond kaas</h4><span class="menu-item-price">€ 5,10</span></div></div></div>
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje gezond hesp</h4><span class="menu-item-price">€ 5,10</span></div></div></div>
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje gezond vleessla</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje gezond tonijn</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje gezond kaas &amp; hesp</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
-                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Broodje gezond gerookte zalm</h4><span class="menu-item-price">€ 6,30</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje">Broodje</h4><span class="menu-item-price">€ 1,40</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje_boter">Broodje boter</h4><span class="menu-item-price">€ 2,00</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje_konfituur">Broodje konfituur</h4><span class="menu-item-price">€ 2,50</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje_nutella">Broodje Nutella</h4><span class="menu-item-price">€ 2,50</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje_kaas">Broodje kaas</h4><span class="menu-item-price">€ 3,00</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje_hesp">Broodje hesp</h4><span class="menu-item-price">€ 3,00</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje_salami">Broodje salami</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje_vleessla">Broodje vleessla</h4><span class="menu-item-price">€ 3,40</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje_americain">Broodje américain</h4><span class="menu-item-price">€ 3,40</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje_tonijn">Broodje tonijn</h4><span class="menu-item-price">€ 3,40</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje_kaas_and_hesp">Broodje kaas &amp; hesp</h4><span class="menu-item-price">€ 4,00</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje_gerookte_zalm">Broodje gerookte zalm</h4><span class="menu-item-price">€ 4,20</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje_gezond">Broodje gezond</h4><span class="menu-item-price">€ 4,20</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje_gezond_kaas">Broodje gezond kaas</h4><span class="menu-item-price">€ 5,10</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje_gezond_hesp">Broodje gezond hesp</h4><span class="menu-item-price">€ 5,10</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje_gezond_vleessla">Broodje gezond vleessla</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje_gezond_tonijn">Broodje gezond tonijn</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje_gezond_kaas_and_hesp">Broodje gezond kaas &amp; hesp</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
+                <div class="menu-item" data-category="broodjes"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.broodje_gezond_gerookte_zalm">Broodje gezond gerookte zalm</h4><span class="menu-item-price">€ 6,30</span></div></div></div>
 
                 <!-- Category: Menu's -->
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu vispasteitje</h4><span class="menu-item-price">€ 33,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu forel sla</h4><span class="menu-item-price">€ 33,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu forel amandelen</h4><span class="menu-item-price">€ 37,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu gegrilde zalm met saus naar keuze of sla</h4><span class="menu-item-price">€ 34,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu heilbot met saus naar keuze</h4><span class="menu-item-price">€ 34,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu gegratineerde witloof met zalm</h4><span class="menu-item-price">€ 34,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu kabeljauwhaasje met saus naar keuze of sla</h4><span class="menu-item-price">€ 36,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu gegrilde tonijnsteak met saus naar keuze</h4><span class="menu-item-price">€ 36,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu scampi (9) met saus naar keuze</h4><span class="menu-item-price">€ 36,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu zeetong sla (geheel of gefileerd)</h4><span class="menu-item-price">€ 46,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu kalkoenrollade met saus naar keuze</h4><span class="menu-item-price">€ 31,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu ossentong met champignons in madeirasaus of saus naar keuze</h4><span class="menu-item-price">€ 31,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu kotelet natuursaus</h4><span class="menu-item-price">€ 31,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu kotelet met saus naar keuze of sla</h4><span class="menu-item-price">€ 35,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu steak natuursaus (gebakken of gegrild)</h4><span class="menu-item-price">€ 34,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu steak (gebakken of gegrild) met saus naar keuze of sla</h4><span class="menu-item-price">€ 38,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu gegrilde brochetten met saus naar keuze of sla</h4><span class="menu-item-price">€ 38,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu varkenshaas met saus naar keuze of sla</h4><span class="menu-item-price">€ 38,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu ½ kip natuursaus</h4><span class="menu-item-price">€ 30,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu ½ kip met saus naar keuze, sla of appelmoes</h4><span class="menu-item-price">€ 34,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu kipfilet natuursaus</h4><span class="menu-item-price">€ 30,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu kipfilet sla, appelmoes of saus naar keuze</h4><span class="menu-item-price">€ 34,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu bouletten met saus naar keuze</h4><span class="menu-item-price">€ 28,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu stoofvlees</h4><span class="menu-item-price">€ 28,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu koninginnenhapje</h4><span class="menu-item-price">€ 31,00</span></div></div></div>
-                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Menu gegratineerd witloof</h4><span class="menu-item-price">€ 31,00</span></div></div></div>
+                <div class="menu-item menu-section-title menu-note-row" data-category="menus"><span class="menu-section-badge menu-note-badge" data-i18n="menu.note.included">Frieten, kroketten, puree, rijst of brood inbegrepen</span><span class="menu-section-line"></span></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_vispasteitje">Menu vispasteitje</h4><span class="menu-item-price">€ 33,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_forel_sla">Menu forel sla</h4><span class="menu-item-price">€ 33,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_forel_amandelen">Menu forel amandelen</h4><span class="menu-item-price">€ 37,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_gegrilde_zalm_met_saus_naar_keuze_of_sla">Menu gegrilde zalm met saus naar keuze of sla</h4><span class="menu-item-price">€ 34,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_heilbot_met_saus_naar_keuze">Menu heilbot met saus naar keuze</h4><span class="menu-item-price">€ 34,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_gegratineerde_witloof_met_zalm">Menu gegratineerde witloof met zalm</h4><span class="menu-item-price">€ 34,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_kabeljauwhaasje_met_saus_naar_keuze_of_sla">Menu kabeljauwhaasje met saus naar keuze of sla</h4><span class="menu-item-price">€ 36,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_gegrilde_tonijnsteak_met_saus_naar_keuze">Menu gegrilde tonijnsteak met saus naar keuze</h4><span class="menu-item-price">€ 36,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_scampi_9_met_saus_naar_keuze">Menu scampi (9) met saus naar keuze</h4><span class="menu-item-price">€ 36,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_zeetong_sla_geheel_of_gefileerd">Menu zeetong sla (geheel of gefileerd)</h4><span class="menu-item-price">€ 46,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_kalkoenrollade_met_saus_naar_keuze">Menu kalkoenrollade met saus naar keuze</h4><span class="menu-item-price">€ 31,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_ossentong_met_champignons_in_madeirasaus_of_saus_naar_keuze">Menu ossentong met champignons in madeirasaus of saus naar keuze</h4><span class="menu-item-price">€ 31,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_kotelet_natuursaus">Menu kotelet natuursaus</h4><span class="menu-item-price">€ 31,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_kotelet_met_saus_naar_keuze_of_sla">Menu kotelet met saus naar keuze of sla</h4><span class="menu-item-price">€ 35,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_steak_natuursaus_gebakken_of_gegrild">Menu steak natuursaus (gebakken of gegrild)</h4><span class="menu-item-price">€ 34,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_steak_gebakken_of_gegrild_met_saus_naar_keuze_of_sla">Menu steak (gebakken of gegrild) met saus naar keuze of sla</h4><span class="menu-item-price">€ 38,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_gegrilde_brochetten_met_saus_naar_keuze_of_sla">Menu gegrilde brochetten met saus naar keuze of sla</h4><span class="menu-item-price">€ 38,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_varkenshaas_met_saus_naar_keuze_of_sla">Menu varkenshaas met saus naar keuze of sla</h4><span class="menu-item-price">€ 38,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_1_2_kip_natuursaus">Menu ½ kip natuursaus</h4><span class="menu-item-price">€ 30,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_1_2_kip_met_saus_naar_keuze_sla_of_appelmoes">Menu ½ kip met saus naar keuze, sla of appelmoes</h4><span class="menu-item-price">€ 34,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_kipfilet_natuursaus">Menu kipfilet natuursaus</h4><span class="menu-item-price">€ 30,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_kipfilet_sla_appelmoes_of_saus_naar_keuze">Menu kipfilet sla, appelmoes of saus naar keuze</h4><span class="menu-item-price">€ 34,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_bouletten_met_saus_naar_keuze">Menu bouletten met saus naar keuze</h4><span class="menu-item-price">€ 28,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_stoofvlees">Menu stoofvlees</h4><span class="menu-item-price">€ 28,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_koninginnenhapje">Menu koninginnenhapje</h4><span class="menu-item-price">€ 31,00</span></div></div></div>
+                <div class="menu-item" data-category="menus"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.menu_gegratineerd_witloof">Menu gegratineerd witloof</h4><span class="menu-item-price">€ 31,00</span></div></div></div>
+
+                <div class="menu-item menu-sauzen-box" data-category="menus"><h4 class="font-heading" data-i18n="menu.sauzen.title">Sauzen naar keuze</h4><div class="menu-sauzen-tags"><span class="menu-sauzen-tag" data-i18n="menu.sauzen.champignonroom">Champignonroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.peperroom">peperroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.provencaal">proven&ccedil;aal</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.curry">curry</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.tomatenroom">tomatenroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.diabolique">diabolique</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.bearnaise">b&eacute;arnaise</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.mosterd">mosterd</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.lookroom">lookroom</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.lookboter">lookboter</span><span class="menu-sauzen-tag" data-i18n="menu.sauzen.champignonwijn">champignonwijn</span></div></div>
 
                 <!-- Category: Dranken -->
-                <div class="menu-item menu-section-title" data-category="dranken"><h3 class="font-heading">Aperitieven</h3><span class="menu-section-line"></span></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Pineau de Charentes</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Ricard</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Martini wit / rood</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Sherry droog</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Porto wit / rood</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Kirr</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Kirr Royal</h4><span class="menu-item-price">€ 7,50</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Gancia</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Gancia orange</h4><span class="menu-item-price">€ 9,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Campari</h4><span class="menu-item-price">€ 6,50</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Campari orange</h4><span class="menu-item-price">€ 9,70</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Cava (glas)</h4><span class="menu-item-price">€ 7,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Fles Cava</h4><span class="menu-item-price">€ 28,00</span></div></div></div>
-                <div class="menu-item menu-section-title" data-category="dranken"><h3 class="font-heading">Wijnen</h3><span class="menu-section-line"></span></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Fles wit "Chardonnay" (75cl)</h4><span class="menu-item-price">€ 20,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Karaf witte wijn (37,5cl)</h4><span class="menu-item-price">€ 11,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Le Grand Noir "Chardonnay" (75cl)</h4><span class="menu-item-price">€ 22,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Fles rosé (75cl)</h4><span class="menu-item-price">€ 20,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Karaf rosé wijn (37,5cl)</h4><span class="menu-item-price">€ 11,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Fles rood (75cl)</h4><span class="menu-item-price">€ 20,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Karaf rode wijn (37,5cl)</h4><span class="menu-item-price">€ 11,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Le Grand Noir "Cabernet Syrah" (75cl)</h4><span class="menu-item-price">€ 22,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Glas wijn (wit / rood / rosé)</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
-                <div class="menu-item menu-section-title" data-category="dranken"><h3 class="font-heading">Bieren</h3><span class="menu-section-line"></span></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Stella</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Palm</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Hoegaarden</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Jupiler 0.0</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Piedboeuf</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Kriek</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Trappist Westmalle</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Tripel Westmalle</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Leffe Donker</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Leffe Blond</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Duvel</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Scotch</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Orval</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Cornet</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Tripel Karmeliet</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
-                <div class="menu-item menu-section-title" data-category="dranken"><h3 class="font-heading">Frisdranken</h3><span class="menu-section-line"></span></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Mineraalwater</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Bruiswater</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Fanta</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Sprite</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Coca-Cola / Light / Zero</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Fuze Tea perzik</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Fuze Tea mango</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Fruitsap</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Appelsap</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Pompelmoessap</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Ice Tea</h4><span class="menu-item-price">€ 3,50</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Perrier</h4><span class="menu-item-price">€ 3,50</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Tonic</h4><span class="menu-item-price">€ 3,50</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Agrum</h4><span class="menu-item-price">€ 3,50</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Gini</h4><span class="menu-item-price">€ 3,50</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Tönissteiner citroen</h4><span class="menu-item-price">€ 3,50</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Tönissteiner vruchtenkorf</h4><span class="menu-item-price">€ 3,50</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Fristi</h4><span class="menu-item-price">€ 3,50</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Pom-Ton</h4><span class="menu-item-price">€ 6,70</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Eskimo</h4><span class="menu-item-price">€ 6,70</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Fruitsap natuur</h4><span class="menu-item-price">€ 7,00</span></div></div></div>
-                <div class="menu-item menu-section-title" data-category="dranken"><h3 class="font-heading">Milkshakes</h3><span class="menu-section-line"></span></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Milkshake Vanille</h4><span class="menu-item-price">€ 7,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Milkshake Chocolade</h4><span class="menu-item-price">€ 7,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Milkshake Mokka</h4><span class="menu-item-price">€ 7,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Milkshake Banaan</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Milkshake Aardbeien (seizoen)</h4><span class="menu-item-price">€ 10,00</span></div></div></div>
-                <div class="menu-item menu-section-title" data-category="dranken"><h3 class="font-heading">Warme Dranken</h3><span class="menu-section-line"></span></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Koffiepotje (per persoon)</h4><span class="menu-item-price">€ 3,60</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Koffie verkeerd (potje per persoon)</h4><span class="menu-item-price">€ 4,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Cafeïnevrije koffie (potje per persoon)</h4><span class="menu-item-price">€ 3,90</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Cafeïnevrije verkeerd (potje per persoon)</h4><span class="menu-item-price">€ 4,30</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Theepotje (per persoon)</h4><span class="menu-item-price">€ 3,60</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Filter</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Espresso</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Cappuccino</h4><span class="menu-item-price">€ 4,30</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Latte Macchiato</h4><span class="menu-item-price">€ 4,50</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Latte Macchiato met smaakje</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Irish coffee (whisky)</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">French coffee (cognac)</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Italian coffee (amaretto)</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
-                <div class="menu-item menu-section-title" data-category="dranken"><h3 class="font-heading">Melk</h3><span class="menu-section-line"></span></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Melk</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Chocolademelk</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
-                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Chocolademelk met slagroom</h4><span class="menu-item-price">€ 4,00</span></div></div></div>
+                <div class="menu-item menu-section-title" data-category="dranken"><h3 class="font-heading" data-i18n="menu.subsection.aperitieven">Aperitieven</h3><span class="menu-section-line"></span></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.pineau_de_charentes">Pineau de Charentes</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.ricard">Ricard</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.martini_wit_rood">Martini wit / rood</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.sherry_droog">Sherry droog</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.porto_wit_rood">Porto wit / rood</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.kirr">Kirr</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.kirr_royal">Kirr Royal</h4><span class="menu-item-price">€ 7,50</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.gancia">Gancia</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.gancia_orange">Gancia orange</h4><span class="menu-item-price">€ 9,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.campari">Campari</h4><span class="menu-item-price">€ 6,50</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.campari_orange">Campari orange</h4><span class="menu-item-price">€ 9,70</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.cava_glas">Cava (glas)</h4><span class="menu-item-price">€ 7,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.fles_cava">Fles Cava</h4><span class="menu-item-price">€ 28,00</span></div></div></div>
+                <div class="menu-item menu-section-title" data-category="dranken"><h3 class="font-heading" data-i18n="menu.subsection.wijnen">Wijnen</h3><span class="menu-section-line"></span></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.fles_wit_chardonnay_75cl">Fles wit "Chardonnay" (75cl)</h4><span class="menu-item-price">€ 20,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.karaf_witte_wijn_37_5cl">Karaf witte wijn (37,5cl)</h4><span class="menu-item-price">€ 11,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.le_grand_noir_chardonnay_75cl">Le Grand Noir "Chardonnay" (75cl)</h4><span class="menu-item-price">€ 22,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.fles_rose_75cl">Fles rosé (75cl)</h4><span class="menu-item-price">€ 20,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.karaf_rose_wijn_37_5cl">Karaf rosé wijn (37,5cl)</h4><span class="menu-item-price">€ 11,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.fles_rood_75cl">Fles rood (75cl)</h4><span class="menu-item-price">€ 20,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.karaf_rode_wijn_37_5cl">Karaf rode wijn (37,5cl)</h4><span class="menu-item-price">€ 11,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.le_grand_noir_cabernet_syrah_75cl">Le Grand Noir "Cabernet Syrah" (75cl)</h4><span class="menu-item-price">€ 22,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.glas_wijn_wit_rood_rose">Glas wijn (wit / rood / rosé)</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
+                <div class="menu-item menu-section-title" data-category="dranken"><h3 class="font-heading" data-i18n="menu.subsection.bieren">Bieren</h3><span class="menu-section-line"></span></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.stella">Stella</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.palm">Palm</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.hoegaarden">Hoegaarden</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.jupiler_0_0">Jupiler 0.0</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.piedboeuf">Piedboeuf</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.kriek">Kriek</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.trappist_westmalle">Trappist Westmalle</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.tripel_westmalle">Tripel Westmalle</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.leffe_donker">Leffe Donker</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.leffe_blond">Leffe Blond</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.duvel">Duvel</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.scotch">Scotch</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.orval">Orval</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.cornet">Cornet</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.tripel_karmeliet">Tripel Karmeliet</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
+                <div class="menu-item menu-section-title" data-category="dranken"><h3 class="font-heading" data-i18n="menu.subsection.frisdranken">Frisdranken</h3><span class="menu-section-line"></span></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.mineraalwater">Mineraalwater</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.bruiswater">Bruiswater</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.fanta">Fanta</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.sprite">Sprite</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.coca_cola_light_zero">Coca-Cola / Light / Zero</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.fuze_tea_perzik">Fuze Tea perzik</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.fuze_tea_mango">Fuze Tea mango</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.fruitsap">Fruitsap</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.appelsap">Appelsap</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.pompelmoessap">Pompelmoessap</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.ice_tea">Ice Tea</h4><span class="menu-item-price">€ 3,50</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.perrier">Perrier</h4><span class="menu-item-price">€ 3,50</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.tonic">Tonic</h4><span class="menu-item-price">€ 3,50</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.agrum">Agrum</h4><span class="menu-item-price">€ 3,50</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.gini">Gini</h4><span class="menu-item-price">€ 3,50</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.tonissteiner_citroen">Tönissteiner citroen</h4><span class="menu-item-price">€ 3,50</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.tonissteiner_vruchtenkorf">Tönissteiner vruchtenkorf</h4><span class="menu-item-price">€ 3,50</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.fristi">Fristi</h4><span class="menu-item-price">€ 3,50</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.pom_ton">Pom-Ton</h4><span class="menu-item-price">€ 6,70</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.eskimo">Eskimo</h4><span class="menu-item-price">€ 6,70</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.fruitsap_natuur">Fruitsap natuur</h4><span class="menu-item-price">€ 7,00</span></div></div></div>
+                <div class="menu-item menu-section-title" data-category="dranken"><h3 class="font-heading" data-i18n="menu.subsection.milkshakes">Milkshakes</h3><span class="menu-section-line"></span></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.milkshake_vanille">Milkshake Vanille</h4><span class="menu-item-price">€ 7,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.milkshake_chocolade">Milkshake Chocolade</h4><span class="menu-item-price">€ 7,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.milkshake_mokka">Milkshake Mokka</h4><span class="menu-item-price">€ 7,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.milkshake_banaan">Milkshake Banaan</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.milkshake_aardbeien_seizoen">Milkshake Aardbeien (seizoen)</h4><span class="menu-item-price">€ 10,00</span></div></div></div>
+                <div class="menu-item menu-section-title" data-category="dranken"><h3 class="font-heading" data-i18n="menu.subsection.warme_dranken">Warme Dranken</h3><span class="menu-section-line"></span></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.koffiepotje_per_persoon">Koffiepotje (per persoon)</h4><span class="menu-item-price">€ 3,60</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.koffie_verkeerd_potje_per_persoon">Koffie verkeerd (potje per persoon)</h4><span class="menu-item-price">€ 4,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.cafeinevrije_koffie_potje_per_persoon">Cafeïnevrije koffie (potje per persoon)</h4><span class="menu-item-price">€ 3,90</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.cafeinevrije_verkeerd_potje_per_persoon">Cafeïnevrije verkeerd (potje per persoon)</h4><span class="menu-item-price">€ 4,30</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.theepotje_per_persoon">Theepotje (per persoon)</h4><span class="menu-item-price">€ 3,60</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.filter">Filter</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.espresso">Espresso</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.cappuccino">Cappuccino</h4><span class="menu-item-price">€ 4,30</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.latte_macchiato">Latte Macchiato</h4><span class="menu-item-price">€ 4,50</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.latte_macchiato_met_smaakje">Latte Macchiato met smaakje</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.irish_coffee_whisky">Irish coffee (whisky)</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.french_coffee_cognac">French coffee (cognac)</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.italian_coffee_amaretto">Italian coffee (amaretto)</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
+                <div class="menu-item menu-section-title" data-category="dranken"><h3 class="font-heading" data-i18n="menu.subsection.melk">Melk</h3><span class="menu-section-line"></span></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.melk">Melk</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.chocolademelk">Chocolademelk</h4><span class="menu-item-price">€ 3,20</span></div></div></div>
+                <div class="menu-item" data-category="dranken"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.chocolademelk_met_slagroom">Chocolademelk met slagroom</h4><span class="menu-item-price">€ 4,00</span></div></div></div>
 
                 <!-- Category: Desserts -->
                 <div class="menu-item menu-section-title" data-category="desserts">
-                    <h3 class="font-heading">IJs van het Huis</h3>
-                    <span class="menu-section-badge">Supplement slagroom: € 1,50</span>
+                    <h3 class="font-heading" data-i18n="menu.subsection.ijs_van_het_huis">IJs van het Huis</h3>
+                    <span class="menu-section-badge"><span data-i18n="menu.item.supplement_slagroom">Supplement slagroom</span>: € 1,50</span>
                     <span class="menu-section-line"></span>
                 </div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Vanille</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Chocolade</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Mokka</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Grenadine</h4><span class="menu-item-price">€ 6,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Dame Blanche / Noire / Mokka</h4><span class="menu-item-price">€ 8,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Advokaat</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Caramel</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Nootjes</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Warme krieken</h4><span class="menu-item-price">€ 9,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Banaan</h4><span class="menu-item-price">€ 9,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Vers fruit</h4><span class="menu-item-price">€ 10,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Verse ananas</h4><span class="menu-item-price">€ 11,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Aardbeien (seizoen)</h4><span class="menu-item-price">€ 11,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.ijs_vanille">Vanille</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.ijs_chocolade">Chocolade</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.ijs_mokka">Mokka</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.ijs_grenadine">Grenadine</h4><span class="menu-item-price">€ 6,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.dame_blanche_noire_mokka">Dame Blanche / Noire / Mokka</h4><span class="menu-item-price">€ 8,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.advokaat">Advokaat</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.caramel">Caramel</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.nootjes">Nootjes</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.warme_krieken_ijs">Warme krieken</h4><span class="menu-item-price">€ 9,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.banaan_ijs">Banaan</h4><span class="menu-item-price">€ 9,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.vers_fruit_ijs">Vers fruit</h4><span class="menu-item-price">€ 10,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.ijs_verse_ananas">Verse ananas</h4><span class="menu-item-price">€ 11,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.aardbeien_seizoen_ijs">Aardbeien (seizoen)</h4><span class="menu-item-price">€ 11,50</span></div></div></div>
 
                 <div class="menu-item menu-section-title" data-category="desserts">
-                    <h3 class="font-heading">Kinderijs</h3>
-                    <span class="menu-section-badge">Supplement slagroom: € 1,00</span>
+                    <h3 class="font-heading" data-i18n="menu.subsection.kinderijs">Kinderijs</h3>
+                    <span class="menu-section-badge"><span data-i18n="menu.item.supplement_slagroom">Supplement slagroom</span>: € 1,00</span>
                     <span class="menu-section-line"></span>
                 </div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Kinderijs Vanille / Chocolade / Mokka</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Kinderijs Grenadine</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Kinder Dame Blanche / Noire / Mokka</h4><span class="menu-item-price">€ 7,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Kinderijs Banaan / Vers fruit</h4><span class="menu-item-price">€ 7,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Kinderijs Aardbeien</h4><span class="menu-item-price">€ 7,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Kinderijs Ananas</h4><span class="menu-item-price">€ 7,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.kinderijs_vanille_chocolade_mokka">Kinderijs Vanille / Chocolade / Mokka</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.kinderijs_grenadine">Kinderijs Grenadine</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.kinder_dame_blanche_noire_mokka">Kinder Dame Blanche / Noire / Mokka</h4><span class="menu-item-price">€ 7,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.kinderijs_banaan_vers_fruit">Kinderijs Banaan / Vers fruit</h4><span class="menu-item-price">€ 7,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.kinderijs_aardbeien">Kinderijs Aardbeien</h4><span class="menu-item-price">€ 7,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.kinderijs_ananas">Kinderijs Ananas</h4><span class="menu-item-price">€ 7,50</span></div></div></div>
 
-                <div class="menu-item menu-section-title" data-category="desserts"><h3 class="font-heading">Taart per Stuk</h3><span class="menu-section-line"></span></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Abrikoos</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Pruimen</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Rijst</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Flan</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Appelstrüdel</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Krieken</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Kaastaart (gebakken)</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Koude kaastaart (framboos)</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Hilton</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Aardbeien met slagroom</h4><span class="menu-item-price">€ 7,50</span></div></div></div>
+                <div class="menu-item menu-section-title" data-category="desserts"><h3 class="font-heading" data-i18n="menu.subsection.taart_per_stuk">Taart per Stuk</h3><span class="menu-section-line"></span></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.taart_abrikoos">Abrikoos</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.taart_pruimen">Pruimen</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.taart_rijst">Rijst</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.taart_flan">Flan</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.taart_appelstrudel">Appelstrüdel</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.taart_krieken">Krieken</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.taart_kaastaart_gebakken">Kaastaart (gebakken)</h4><span class="menu-item-price">€ 5,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.taart_koude_kaastaart_framboos">Koude kaastaart (framboos)</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.taart_hilton">Hilton</h4><span class="menu-item-price">€ 6,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.taart_aardbeien_met_slagroom">Aardbeien met slagroom</h4><span class="menu-item-price">€ 7,50</span></div></div></div>
 
                 <div class="menu-item menu-section-title" data-category="desserts">
-                    <h3 class="font-heading">Brusselse Wafels</h3>
-                    <span class="menu-section-badge">Supplement slagroom: € 1,50</span>
+                    <h3 class="font-heading" data-i18n="menu.subsection.brusselse_wafels">Brusselse Wafels</h3>
+                    <span class="menu-section-badge"><span data-i18n="menu.item.supplement_slagroom">Supplement slagroom</span>: € 1,50</span>
                     <span class="menu-section-line"></span>
                 </div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Suiker</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Boter</h4><span class="menu-item-price">€ 6,20</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Chocoladesaus</h4><span class="menu-item-price">€ 6,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Vers fruit</h4><span class="menu-item-price">€ 8,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Warme krieken</h4><span class="menu-item-price">€ 8,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">IJs</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">IJs &amp; chocoladesaus</h4><span class="menu-item-price">€ 10,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Aardbeien (seizoen)</h4><span class="menu-item-price">€ 10,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">IJs &amp; warme krieken</h4><span class="menu-item-price">€ 12,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.brusselse_wafel_suiker">Suiker</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.brusselse_wafel_boter">Boter</h4><span class="menu-item-price">€ 6,20</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.brusselse_wafel_chocoladesaus">Chocoladesaus</h4><span class="menu-item-price">€ 6,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.brusselse_wafel_vers_fruit">Vers fruit</h4><span class="menu-item-price">€ 8,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.brusselse_wafel_warme_krieken">Warme krieken</h4><span class="menu-item-price">€ 8,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.brusselse_wafel_ijs">IJs</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.brusselse_wafel_ijs_and_chocoladesaus">IJs &amp; chocoladesaus</h4><span class="menu-item-price">€ 10,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.brusselse_wafel_aardbeien_seizoen">Aardbeien (seizoen)</h4><span class="menu-item-price">€ 10,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.brusselse_wafel_ijs_and_warme_krieken">IJs &amp; warme krieken</h4><span class="menu-item-price">€ 12,50</span></div></div></div>
 
-                <div class="menu-item menu-section-title" data-category="desserts"><h3 class="font-heading">Pannenkoeken</h3><span class="menu-section-line"></span></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Suiker</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Candijsiroop</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Perensiroop</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Nutella</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Konfituur</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Chocoladesaus</h4><span class="menu-item-price">€ 6,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Warme krieken</h4><span class="menu-item-price">€ 8,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">IJs</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">IJs &amp; chocoladesaus</h4><span class="menu-item-price">€ 10,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">IJs &amp; warme krieken</h4><span class="menu-item-price">€ 12,50</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Appel</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
-                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading">Appelbeignets (sept. tot Pasen)</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
+                <div class="menu-item menu-section-title" data-category="desserts"><h3 class="font-heading" data-i18n="menu.subsection.pannenkoeken">Pannenkoeken</h3><span class="menu-section-line"></span></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.pannenkoek_suiker">Suiker</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.pannenkoek_candijsiroop">Candijsiroop</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.pannenkoek_perensiroop">Perensiroop</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.pannenkoek_nutella">Nutella</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.pannenkoek_konfituur">Konfituur</h4><span class="menu-item-price">€ 5,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.pannenkoek_chocoladesaus">Chocoladesaus</h4><span class="menu-item-price">€ 6,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.pannenkoek_warme_krieken">Warme krieken</h4><span class="menu-item-price">€ 8,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.pannenkoek_ijs">IJs</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.pannenkoek_ijs_and_chocoladesaus">IJs &amp; chocoladesaus</h4><span class="menu-item-price">€ 10,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.pannenkoek_ijs_and_warme_krieken">IJs &amp; warme krieken</h4><span class="menu-item-price">€ 12,50</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.pannenkoek_appel">Appel</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
+                <div class="menu-item" data-category="desserts"><div class="menu-item-content"><div class="menu-item-title"><h4 class="font-heading" data-i18n="menu.item.appelbeignets_sept_tot_pasen">Appelbeignets (sept. tot Pasen)</h4><span class="menu-item-price">€ 9,00</span></div></div></div>
 
             </div>
         </div>
@@ -508,46 +546,46 @@
                         <img src="assets/logo.png" alt="De Ram Logo" class="logo-img">
                         De <span>Ram</span>
                     </div>
-                    <p class="footer-desc">Een warme, familiale brasserie in hartje Scherpenheuvel waar u kunt genieten van échte Belgische smaken en gulle porties.</p>
+                    <p class="footer-desc" data-i18n="footer.desc">Een warme, familiale brasserie in hartje Scherpenheuvel waar u kunt genieten van échte Belgische smaken en gulle porties.</p>
                     <div class="social-links">
                         <a href="https://www.facebook.com/pages/De-Ram/152076358186743" target="_blank" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
 
                 <div class="footer-column">
-                    <h4>Navigatie</h4>
+                    <h4 data-i18n="footer.nav.title">Navigatie</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="menu.html">Menukaart</a></li>
-                        <li><a href="about.html">Over Ons</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="menu.html" data-i18n="nav.menu">Menukaart</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">Over Ons</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4>Onze Keuken</h4>
+                    <h4 data-i18n="footer.kitchen.title">Onze Keuken</h4>
                     <ul class="footer-links">
-                        <li><a href="menu.html?filter=warm">Warme Schotels</a></li>
-                        <li><a href="menu.html?filter=vis">Warme Visgerechten</a></li>
-                        <li><a href="menu.html?filter=dranken">Dranken &amp; Bieren</a></li>
-                        <li><a href="menu.html?filter=desserts">Wafels &amp; Desserts</a></li>
+                        <li><a href="menu.html?filter=warm" data-i18n="footer.kitchen.warm">Warme Schotels</a></li>
+                        <li><a href="menu.html?filter=vis" data-i18n="footer.kitchen.fish">Warme Visgerechten</a></li>
+                        <li><a href="menu.html?filter=dranken" data-i18n="footer.kitchen.drinks">Dranken &amp; Bieren</a></li>
+                        <li><a href="menu.html?filter=desserts" data-i18n="footer.kitchen.desserts">Wafels &amp; Desserts</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4>Contact & Info</h4>
+                    <h4 data-i18n="footer.contact.title">Contact & Info</h4>
                     <ul class="footer-contact">
                         <li>
                             <i class="fas fa-location-dot"></i>
-                            <span>Albertusplein 9, 3270 Scherpenheuvel</span>
+                            <span data-i18n="footer.contact.address">Albertusplein 9, 3270 Scherpenheuvel</span>
                         </li>
                         <li>
                             <i class="fas fa-phone"></i>
-                            <span>+32 13 77 14 95</span>
+                            <span data-i18n="footer.contact.phone">+32 13 77 14 95</span>
                         </li>
                         <li>
                             <i class="fas fa-calendar"></i>
-                            <span>Vrijdag sluitingsdag</span>
+                            <span data-i18n="footer.contact.closedday">Vrijdag sluitingsdag</span>
                         </li>
                         <li>
                             <i class="fas fa-file-invoice"></i>
@@ -558,13 +596,15 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Restaurant De Ram (BTW BE 0427.495.430). Alle rechten voorbehouden.</p>
-                <p>Website ontworpen & ontwikkeld door <a href="https://studiotm.be/" target="_blank" rel="noopener noreferrer" class="text-accent" style="font-weight: 600;">TM Studio</a></p>
+                <p data-i18n="footer.copyright">© 2026 Restaurant De Ram (BTW BE 0427.495.430). Alle rechten voorbehouden.</p>
+                <p><span data-i18n="footer.credit.pre">Website ontworpen & ontwikkeld door</span> <a href="https://studiotm.be/" target="_blank" rel="noopener noreferrer" class="text-accent" style="font-weight: 600;">TM Studio</a></p>
             </div>
         </div>
     </footer>
 
     <!-- Custom JS -->
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
     <script src="app.js"></script>
     <script src="announcement.js"></script>
 </body>

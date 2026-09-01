@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Over Ons | De Ram Scherpenheuvel</title>
-    <meta name="description" content="Ontdek het verhaal achter Restaurant De Ram. Leer meer over onze passie voor de Belgische keuken, onze geschiedenis op het Albertusplein en onze filosofie.">
+    <title data-i18n="meta.about.title">Over Ons | De Ram Scherpenheuvel</title>
+    <meta name="description" data-i18n="meta.about.description" content="Ontdek het verhaal achter Restaurant De Ram. Leer meer over onze passie voor de Belgische keuken, onze geschiedenis op het Albertusplein en onze filosofie.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,13 +36,19 @@
                 </a>
                 
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="index.html" id="linkHome">Home</a></li>
-                    <li><a href="menu.html" id="linkMenu">Menukaart</a></li>
-                    <li><a href="about.html" class="active" id="linkAbout">Over Ons</a></li>
-                    <li><a href="contact.html" id="linkContact">Contact</a></li>
+                    <li><a href="index.html" id="linkHome" data-i18n="nav.home">Home</a></li>
+                    <li><a href="menu.html" id="linkMenu" data-i18n="nav.menu">Menukaart</a></li>
+                    <li><a href="about.html" class="active" id="linkAbout" data-i18n="nav.about">Over Ons</a></li>
+                    <li><a href="contact.html" id="linkContact" data-i18n="nav.contact">Contact</a></li>
                 </ul>
 
                 <div class="nav-actions">
+                    <div class="lang-switcher" id="langSwitcher">
+                        <button class="lang-btn active" data-lang="nl">NL</button>
+                        <button class="lang-btn" data-lang="fr">FR</button>
+                        <button class="lang-btn" data-lang="de">DE</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
                     <button class="menu-toggle" id="menuToggle" aria-label="Menu openen">
                         <i class="fas fa-bars"></i>
                     </button>
@@ -54,9 +60,9 @@
     <!-- Page Banner -->
     <section class="page-banner" style="background-image: url('assets/restaurant_interior.png');" id="aboutBanner">
         <div class="banner-content">
-            <h1 class="banner-title font-heading">Onze Storie</h1>
+            <h1 class="banner-title font-heading" data-i18n="about.banner.title">Onze Storie</h1>
             <div class="banner-breadcrumbs">
-                <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Over Ons</span>
+                <a href="index.html" data-i18n="nav.home">Home</a> &nbsp;/&nbsp; <span data-i18n="about.breadcrumb.current">Over Ons</span>
             </div>
         </div>
     </section>
@@ -66,11 +72,11 @@
         <div class="container">
             <div class="story-row">
                 <div class="story-text reveal">
-                    <span class="section-subtitle text-accent">Sinds 26 juni 1985</span>
-                    <h2 class="font-heading" style="font-size: 2.8rem; margin-bottom: 25px;">Een Gevestigde Waarde in Scherpenheuvel</h2>
-                    <p>Restaurant De Ram werd officieel opgericht op <strong>26 juni 1985</strong> en bevindt zich prachtig aan het bruisende Albertusplein. Al meer dan 40 jaar verwelkomen wij zowel de inwoners van Scherpenheuvel als bezoekers en bedevaartgangers van ver daarbuiten. Wat ooit begon als een geliefde ontmoetingsplek is door de jaren heen uitgegroeid tot een gevestigde waarde waar de klassieke Belgische brasseriekeuken centraal staat.</p>
-                    <p>Onze filosofie is simpel: eerlijke ingrediënten, royale porties en een ontvangst die voelt als thuiskomen. Wij geloven dat eten mensen verbindt. Daarom hebben we een plek gecreëerd waar families samenkomen, vrienden lachen en bezoekers uitrusten na een wandeling rond de historische Basiliek.</p>
-                    <div class="chef-quote">
+                    <span class="section-subtitle text-accent" data-i18n="about.story1.subtitle">Sinds 26 juni 1985</span>
+                    <h2 class="font-heading" style="font-size: 2.8rem; margin-bottom: 25px;" data-i18n="about.story1.title">Een Gevestigde Waarde in Scherpenheuvel</h2>
+                    <p data-i18n="about.story1.p1">Restaurant De Ram werd officieel opgericht op 26 juni 1985 en bevindt zich prachtig aan het bruisende Albertusplein. Al meer dan 40 jaar verwelkomen wij zowel de inwoners van Scherpenheuvel als bezoekers en bedevaartgangers van ver daarbuiten. Wat ooit begon als een geliefde ontmoetingsplek is door de jaren heen uitgegroeid tot een gevestigde waarde waar de klassieke Belgische brasseriekeuken centraal staat.</p>
+                    <p data-i18n="about.story1.p2">Onze filosofie is simpel: eerlijke ingrediënten, royale porties en een ontvangst die voelt als thuiskomen. Wij geloven dat eten mensen verbindt. Daarom hebben we een plek gecreëerd waar families samenkomen, vrienden lachen en bezoekers uitrusten na een wandeling rond de historische Basiliek.</p>
+                    <div class="chef-quote" data-i18n="about.story1.quote">
                         "Echte gastvrijheid zit in de details: een gulle glimlach, een perfect getapt biertje en een bord vol liefde gegaard stoofvlees."
                     </div>
                 </div>
@@ -84,8 +90,8 @@
                 <div class="parking-banner-header">
                     <div class="feature-icon" style="margin-bottom: 0; font-size: 2.2rem;"><i class="fas fa-lightbulb"></i></div>
                     <div>
-                        <h3 class="feature-title font-heading" style="margin-bottom: 4px; font-size: 1.4rem;">Wist U Dat? — Weetjes over De Ram</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">Unieke feiten en tradities uit de rijke geschiedenis van ons restaurant op het Albertusplein:</p>
+                        <h3 class="feature-title font-heading" style="margin-bottom: 4px; font-size: 1.4rem;" data-i18n="about.trivia.title">Wist U Dat? — Weetjes over De Ram</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;" data-i18n="about.trivia.desc">Unieke feiten en tradities uit de rijke geschiedenis van ons restaurant op het Albertusplein:</p>
                     </div>
                 </div>
 
@@ -93,18 +99,18 @@
                     <div class="parking-card">
                         <i class="fas fa-calendar-check"></i>
                         <div class="parking-info">
-                            <strong>Opgericht op 26 Juni 1985</strong>
-                            <span>Al sinds 26 juni 1985 ontvangt De Ram met trots gasten op het Albertusplein in Scherpenheuvel.</span>
+                            <strong data-i18n="about.trivia.card1.title">Opgericht op 26 Juni 1985</strong>
+                            <span data-i18n="about.trivia.card1.desc">Al sinds 26 juni 1985 ontvangt De Ram met trots gasten op het Albertusplein in Scherpenheuvel.</span>
                         </div>
                     </div>
 
                     <div class="parking-card">
                         <i class="fas fa-user-check"></i>
                         <div class="parking-info">
-                            <strong>De Laatste 'Binnenroeper' (Omer Mievis)</strong>
-                            <span>Decennialang staat Omer Mievis buiten aan de deur om gasten met een warme glimlach te verwelkomen — een unieke volkstraditie in Scherpenheuvel!</span>
+                            <strong data-i18n="about.trivia.card2.title">De Laatste 'Binnenroeper' (Omer Mievis)</strong>
+                            <span data-i18n="about.trivia.card2.desc">Decennialang staat Omer Mievis buiten aan de deur om gasten met een warme glimlach te verwelkomen — een unieke volkstraditie in Scherpenheuvel!</span>
                             <a href="https://www.robtv.be/nieuws/maak-kennis-met-goedlachse-omer-mievis-de-laatste-binnenroeper-van-scherpenheuvel-de-mensen-apprecieren-een-goeiedag-142095" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-size: 0.82rem; margin-top: 6px; display: inline-flex; align-items: center; gap: 4px; text-decoration: underline; font-weight: 500;">
-                                <i class="fas fa-tv"></i> Bekijk de ROB TV reportage <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+                                <i class="fas fa-tv"></i> <span data-i18n="about.trivia.card2.link">Bekijk de ROB TV reportage</span> <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
                             </a>
                         </div>
                     </div>
@@ -112,16 +118,16 @@
                     <div class="parking-card">
                         <i class="fas fa-church"></i>
                         <div class="parking-info">
-                            <strong>Historisch Albertusplein</strong>
-                            <span>Gelegen op het Albertusplein 9, vlak tegenover de beroemde 17e-eeuwse zeshoekige barokke Basiliek van Onze-Lieve-Vrouw.</span>
+                            <strong data-i18n="about.trivia.card3.title">Historisch Albertusplein</strong>
+                            <span data-i18n="about.trivia.card3.desc">Gelegen op het Albertusplein 9, vlak tegenover de beroemde 17e-eeuwse zeshoekige barokke Basiliek van Onze-Lieve-Vrouw.</span>
                         </div>
                     </div>
 
                     <div class="parking-card">
                         <i class="fas fa-utensils"></i>
                         <div class="parking-info">
-                            <strong>Generaties Belgische Ambacht</strong>
-                            <span>Klassieke recepten en royale porties die al meer dan 40 jaar met zorg en passie in eigen keuken worden bereid.</span>
+                            <strong data-i18n="about.trivia.card4.title">Generaties Belgische Ambacht</strong>
+                            <span data-i18n="about.trivia.card4.desc">Klassieke recepten en royale porties die al meer dan 40 jaar met zorg en passie in eigen keuken worden bereid.</span>
                         </div>
                     </div>
                 </div>
@@ -129,10 +135,10 @@
 
             <div class="story-row" style="margin-top: 60px;">
                 <div class="story-text reveal">
-                    <span class="section-subtitle text-accent">Onze Keukenfilosofie</span>
-                    <h3 class="font-heading">Traditionele Recepten &amp; Lokale Producten</h3>
-                    <p>In onze keuken zwaait de chef-kok met passie de pollepel. Er wordt uitsluitend gewerkt met beproefde recepten die van generatie op generatie zijn doorgegeven. Denk hierbij aan onze legendarische vol-au-vent (koninginnenhapje) met malse kip en krokant bladerdeeg, of ons heerlijk mals rundstoofvlees gegaard in donker Belgisch abdijbier.</p>
-                    <p>Waar mogelijk kiezen we voor ingrediënten uit de streek. Onze bieren zijn met zorg geselecteerd, variërend van bekende Belgische klassiekers tot lokale bieren die het karakter van onze regio weerspiegelen. En als afsluiter? Dan serveren we met trots onze verse wafels en pannenkoeken.</p>
+                    <span class="section-subtitle text-accent" data-i18n="about.story2.subtitle">Onze Keukenfilosofie</span>
+                    <h3 class="font-heading" data-i18n="about.story2.title">Traditionele Recepten &amp; Lokale Producten</h3>
+                    <p data-i18n="about.story2.p1">In onze keuken zwaait de chef-kok met passie de pollepel. Er wordt uitsluitend gewerkt met beproefde recepten die van generatie op generatie zijn doorgegeven. Denk hierbij aan onze legendarische vol-au-vent (koninginnenhapje) met malse kip en krokant bladerdeeg, of ons heerlijk mals rundstoofvlees gegaard in donker Belgisch abdijbier.</p>
+                    <p data-i18n="about.story2.p2">Waar mogelijk kiezen we voor ingrediënten uit de streek. Onze bieren zijn met zorg geselecteerd, variërend van bekende Belgische klassiekers tot lokale bieren die het karakter van onze regio weerspiegelen. En als afsluiter? Dan serveren we met trots onze verse wafels en pannenkoeken.</p>
                 </div>
                 <div class="story-img reveal" style="transition-delay: 0.2s;">
                     <img src="assets/dessert_drinks.png" alt="Wafels en Belgisch bier">
@@ -145,28 +151,28 @@
     <section class="section" style="background-color: var(--bg-secondary);" id="valuesSection">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-subtitle text-accent">Onze Waarden</span>
-                <h2 class="section-title font-heading">Waar Wij Voor Staan</h2>
-                <p class="section-desc">Bij De Ram streven we elke dag opnieuw naar een uitstekende ervaring voor al onze gasten. Dit zijn de pijlers van ons succes.</p>
+                <span class="section-subtitle text-accent" data-i18n="about.values.subtitle">Onze Waarden</span>
+                <h2 class="section-title font-heading" data-i18n="about.values.title">Waar Wij Voor Staan</h2>
+                <p class="section-desc" data-i18n="about.values.desc">Bij De Ram streven we elke dag opnieuw naar een uitstekende ervaring voor al onze gasten. Dit zijn de pijlers van ons succes.</p>
             </div>
 
             <div class="features-grid">
                 <div class="feature-card reveal" style="transition-delay: 0.1s;">
                     <div class="feature-icon"><i class="fas fa-heart"></i></div>
-                    <h3 class="feature-title font-heading">Gulle Gastvrijheid</h3>
-                    <p>Bij ons ben je geen nummer, maar een gewaardeerde gast. Ons hechte team staat klaar om je met open armen te ontvangen en te bedienen.</p>
+                    <h3 class="feature-title font-heading" data-i18n="about.value1.title">Gulle Gastvrijheid</h3>
+                    <p data-i18n="about.value1.desc">Bij ons ben je geen nummer, maar een gewaardeerde gast. Ons hechte team staat klaar om je met open armen te ontvangen en te bedienen.</p>
                 </div>
 
                 <div class="feature-card reveal" style="transition-delay: 0.2s;">
                     <div class="feature-icon"><i class="fas fa-scale-balanced"></i></div>
-                    <h3 class="feature-title font-heading">Eerlijke Kwaliteit</h3>
-                    <p>Wij selecteren onze leveranciers zorgvuldig. U proeft de versheid van het vlees, de knapperigheid van de groenten en de kwaliteit van de sauzen.</p>
+                    <h3 class="feature-title font-heading" data-i18n="about.value2.title">Eerlijke Kwaliteit</h3>
+                    <p data-i18n="about.value2.desc">Wij selecteren onze leveranciers zorgvuldig. U proeft de versheid van het vlees, de knapperigheid van de groenten en de kwaliteit van de sauzen.</p>
                 </div>
 
                 <div class="feature-card reveal" style="transition-delay: 0.3s;">
                     <div class="feature-icon"><i class="fas fa-sun"></i></div>
-                    <h3 class="feature-title font-heading">Gezellig Genieten</h3>
-                    <p>Of u nu binnen plaatsneemt in ons sfeervolle, houten interieur of buiten op ons sfeervolle terras, gezelligheid en comfort staan voorop.</p>
+                    <h3 class="feature-title font-heading" data-i18n="about.value3.title">Gezellig Genieten</h3>
+                    <p data-i18n="about.value3.desc">Of u nu binnen plaatsneemt in ons sfeervolle, houten interieur of buiten op ons sfeervolle terras, gezelligheid en comfort staan voorop.</p>
                 </div>
             </div>
         </div>
@@ -175,10 +181,10 @@
     <!-- CTA Section -->
     <section class="section reveal" id="ctaSection" style="text-align: center; padding: 120px 0; background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(212, 175, 55, 0.05) 50%, var(--bg-primary) 100%);">
         <div class="container" style="max-width: 700px;">
-            <h2 class="font-heading" style="font-size: 3rem; margin-bottom: 20px;">Zin Gekregen in een Gezellige Middag of Avond?</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 40px; font-size: 1.1rem;">Kom gerust langs op ons terras of in onze sfeervolle brasserie, of bel ons direct voor meer informatie.</p>
+            <h2 class="font-heading" style="font-size: 3rem; margin-bottom: 20px;" data-i18n="about.cta.title">Zin Gekregen in een Gezellige Middag of Avond?</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 40px; font-size: 1.1rem;" data-i18n="about.cta.desc">Kom gerust langs op ons terras of in onze sfeervolle brasserie, of bel ons direct voor meer informatie.</p>
             <div class="hero-btns" style="justify-content: center;">
-                <a href="tel:+3213771495" class="btn btn-primary" id="ctaCallBtn"><i class="fas fa-phone" style="margin-right: 8px;"></i> Bel +32 13 77 14 95</a>
+                <a href="tel:+3213771495" class="btn btn-primary" id="ctaCallBtn"><i class="fas fa-phone" style="margin-right: 8px;"></i> <span data-i18n="about.cta.btn">Bel +32 13 77 14 95</span></a>
             </div>
         </div>
     </section>
@@ -192,46 +198,46 @@
                         <img src="assets/logo.png" alt="De Ram Logo" class="logo-img">
                         De <span>Ram</span>
                     </div>
-                    <p class="footer-desc">Een warme, familiale brasserie in hartje Scherpenheuvel waar u kunt genieten van échte Belgische smaken en gulle porties.</p>
+                    <p class="footer-desc" data-i18n="footer.desc">Een warme, familiale brasserie in hartje Scherpenheuvel waar u kunt genieten van échte Belgische smaken en gulle porties.</p>
                     <div class="social-links">
                         <a href="https://www.facebook.com/pages/De-Ram/152076358186743" target="_blank" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
 
                 <div class="footer-column">
-                    <h4>Navigatie</h4>
+                    <h4 data-i18n="footer.nav.title">Navigatie</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="menu.html">Menukaart</a></li>
-                        <li><a href="about.html">Over Ons</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="menu.html" data-i18n="nav.menu">Menukaart</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">Over Ons</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4>Onze Keuken</h4>
+                    <h4 data-i18n="footer.kitchen.title">Onze Keuken</h4>
                     <ul class="footer-links">
-                        <li><a href="menu.html?filter=warm">Warme Schotels</a></li>
-                        <li><a href="menu.html?filter=vis">Warme Visgerechten</a></li>
-                        <li><a href="menu.html?filter=dranken">Dranken &amp; Bieren</a></li>
-                        <li><a href="menu.html?filter=desserts">Wafels &amp; Desserts</a></li>
+                        <li><a href="menu.html?filter=warm" data-i18n="footer.kitchen.warm">Warme Schotels</a></li>
+                        <li><a href="menu.html?filter=vis" data-i18n="footer.kitchen.fish">Warme Visgerechten</a></li>
+                        <li><a href="menu.html?filter=dranken" data-i18n="footer.kitchen.drinks">Dranken &amp; Bieren</a></li>
+                        <li><a href="menu.html?filter=desserts" data-i18n="footer.kitchen.desserts">Wafels &amp; Desserts</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4>Contact & Info</h4>
+                    <h4 data-i18n="footer.contact.title">Contact & Info</h4>
                     <ul class="footer-contact">
                         <li>
                             <i class="fas fa-location-dot"></i>
-                            <span>Albertusplein 9, 3270 Scherpenheuvel</span>
+                            <span data-i18n="footer.contact.address">Albertusplein 9, 3270 Scherpenheuvel</span>
                         </li>
                         <li>
                             <i class="fas fa-phone"></i>
-                            <span>+32 13 77 14 95</span>
+                            <span data-i18n="footer.contact.phone">+32 13 77 14 95</span>
                         </li>
                         <li>
                             <i class="fas fa-calendar"></i>
-                            <span>Vrijdag sluitingsdag</span>
+                            <span data-i18n="footer.contact.closedday">Vrijdag sluitingsdag</span>
                         </li>
                         <li>
                             <i class="fas fa-file-invoice"></i>
@@ -242,13 +248,15 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Restaurant De Ram (BTW BE 0427.495.430). Alle rechten voorbehouden.</p>
-                <p>Website ontworpen & ontwikkeld door <a href="https://studiotm.be/" target="_blank" rel="noopener noreferrer" class="text-accent" style="font-weight: 600;">TM Studio</a></p>
+                <p data-i18n="footer.copyright">© 2026 Restaurant De Ram (BTW BE 0427.495.430). Alle rechten voorbehouden.</p>
+                <p><span data-i18n="footer.credit.pre">Website ontworpen & ontwikkeld door</span> <a href="https://studiotm.be/" target="_blank" rel="noopener noreferrer" class="text-accent" style="font-weight: 600;">TM Studio</a></p>
             </div>
         </div>
     </footer>
 
     <!-- Custom JS -->
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
     <script src="app.js"></script>
     <script src="announcement.js"></script>
 </body>
