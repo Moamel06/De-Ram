@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Sauzen-vakjes en "inbegrepen"-info horen niet thuis in het "Alles"-overzicht:
     // die worden alleen getoond zodra je op de bijhorende categorie filtert.
-    const isInfoOnlyItem = (item) => item.classList.contains('menu-sauzen-box') || item.classList.contains('menu-note-row');
+    const isInfoOnlyItem = (item) => item.classList.contains('menu-sauzen-box') || item.classList.contains('menu-note-row') || item.classList.contains('menu-category-banner');
 
     if (filterButtons.length > 0 && menuItems.length > 0) {
         const applyFilter = (filterValue, animate) => {

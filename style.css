@@ -1101,6 +1101,32 @@ header.scrolled .navbar {
     box-shadow: none;
 }
 
+/* Gecentreerde meldingsbalk bovenaan een categorie (geldt voor alle gerechten erin) */
+.menu-category-banner {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 8px;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.menu-category-banner::before,
+.menu-category-banner::after {
+    display: none !important;
+}
+
+.menu-category-banner:first-of-type {
+    margin-top: -10px;
+}
+
+.menu-category-banner:hover {
+    transform: none;
+    box-shadow: none;
+}
+
 .menu-section-title h3 {
     font-family: var(--font-heading);
     font-size: 1.35rem;
