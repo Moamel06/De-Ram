@@ -284,9 +284,19 @@ header.scrolled .navbar {
     position: relative;
     display: flex;
     align-items: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: center right;
     background-repeat: no-repeat;
+    z-index: 0;
 }
 
 .hero::before {
@@ -296,7 +306,7 @@ header.scrolled .navbar {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(10, 10, 12, 0.95) 30%, rgba(10, 10, 12, 0.6) 70%, rgba(10, 10, 12, 0.3) 100%);
+    background: linear-gradient(to right, rgba(10, 10, 12, 0.92) 28%, rgba(10, 10, 12, 0.6) 65%, rgba(10, 10, 12, 0.25) 100%);
     z-index: 1;
 }
 
@@ -340,10 +350,14 @@ header.scrolled .navbar {
     gap: 20px;
 }
 
-/* Page Banner (For About & Menu Pages) */
+.hero-mobile-img {
+    display: none;
+}
+
+/* Page Banner (For About, Menu & Contact Pages) */
 .page-banner {
-    height: 45vh;
-    min-height: 350px;
+    height: 40vh;
+    min-height: 300px;
     position: relative;
     display: flex;
     align-items: center;
@@ -351,6 +365,65 @@ header.scrolled .navbar {
     text-align: center;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
+}
+
+.page-banner-bg-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(25px) brightness(0.35);
+    transform: scale(1.1);
+    z-index: 0;
+}
+
+.page-banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.15);
+    z-index: 1;
+}
+
+#contactBanner {
+    height: 52vh;
+    min-height: 420px;
+}
+
+#contactBanner .page-banner-bg {
+    background-size: cover;
+    background-position: center 35%;
+    transform: none;
+}
+
+#menuBanner {
+    height: 52vh;
+    min-height: 420px;
+}
+
+#menuBanner .page-banner-bg {
+    transform: none;
+    background-position: center 0%;
+}
+
+#ctaSection.page-banner {
+    height: 52vh;
+    min-height: 420px;
+    margin-top: 60px;
+    padding: 60px 0;
+}
+
+#ctaSection .page-banner-bg {
+    transform: none;
+    background-position: center 25%;
 }
 
 .page-banner::before {
@@ -360,13 +433,13 @@ header.scrolled .navbar {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(10, 10, 12, 0.6) 0%, rgba(10, 10, 12, 0.95) 100%);
-    z-index: 1;
+    background: linear-gradient(180deg, rgba(10, 10, 12, 0.5) 0%, rgba(10, 10, 12, 0.85) 100%);
+    z-index: 2;
 }
 
 .banner-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .banner-title {
@@ -576,8 +649,8 @@ header.scrolled .navbar {
 }
 
 .promo-image {
-    flex: 1;
-    min-height: 400px;
+    flex: 1.25;
+    min-height: 580px;
     background-size: cover;
     background-position: center;
 }
@@ -1837,7 +1910,7 @@ textarea {
     }
     
     .promo-image {
-        min-height: 250px;
+        min-height: 480px;
     }
     
     .promo-info {
@@ -1855,8 +1928,88 @@ textarea {
         font-size: 2.2rem;
     }
     
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 110px 0 50px;
+    }
+
+    .hero-bg {
+        filter: blur(25px) brightness(0.25);
+        transform: scale(1.15);
+    }
+
+    .hero-mobile-img {
+        display: block;
+        margin: 20px 0 25px 0;
+        border-radius: var(--border-radius-md);
+        overflow: hidden;
+        border: 1px solid rgba(212, 175, 55, 0.35);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.65);
+    }
+
+    .hero-mobile-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: var(--border-radius-md);
+    }
+    
     .hero-title {
         font-size: 2.5rem;
+    }
+    
+    .page-banner {
+        min-height: 250px;
+        height: 32vh;
+    }
+    
+    #aboutBanner {
+        min-height: 340px;
+        height: 40vh;
+    }
+    
+    #contactBanner {
+        min-height: 340px;
+        height: 42vh;
+    }
+    
+    #contactBanner .page-banner-bg {
+        background-position: center 35%;
+    }
+    
+    #menuBanner {
+        min-height: 330px;
+        height: 42vh;
+    }
+    
+    #menuBanner .page-banner-bg {
+        background-position: center 0%;
+    }
+    
+    #ctaSection.page-banner {
+        min-height: 360px;
+        height: auto;
+        padding: 60px 0;
+        margin-top: 40px;
+    }
+    
+    #ctaSection .page-banner-bg {
+        background-position: center 25%;
+    }
+    
+    .story-img img {
+        width: 100%;
+        max-height: 580px;
+        min-height: 450px;
+        object-fit: cover;
+    }
+
+    .promo-image {
+        min-height: 450px;
+        border-radius: var(--border-radius-md);
+        background-size: cover;
+        background-position: center;
     }
     
     .menu-grid {
@@ -1882,6 +2035,19 @@ textarea {
         flex-direction: column;
     }
     
+    .story-img img {
+        max-height: 540px;
+        min-height: 400px;
+    }
+    
+    .promo-image {
+        min-height: 400px;
+    }
+    
+    .special-img-wrapper {
+        height: 220px;
+    }
+    
     .footer-columns {
         grid-template-columns: 1fr;
     }
@@ -1900,6 +2066,7 @@ textarea {
         width: 100%;
         height: 180px;
     }
+}
 /* Parking list on Contact page */
 .parking-list {
     list-style: none;
