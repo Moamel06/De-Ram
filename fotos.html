@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="meta.fotos.title">Foto's & Sfeer | De Ram Scherpenheuvel</title>
+    <meta name="description" data-i18n="meta.fotos.description" content="Bekijk de fotogalerij van Restaurant De Ram in Scherpenheuvel. Ontdek onze klassieke Belgische gerechten, sfeervol terras en authentieke brasserie.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Announcement Banner (hidden until data loads) -->
+    <div id="announcementBanner" class="announcement-banner" style="display: none;" role="alert">
+        <div class="announcement-inner">
+            <div class="announcement-content">
+                <strong id="announcementTitle" class="announcement-title"></strong>
+                <span id="announcementDesc" class="announcement-desc"></span>
+            </div>
+            <button id="announcementDismiss" class="announcement-dismiss" aria-label="Sluiten">&times;</button>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo" id="navLogo">
+                    <img src="assets/logo.svg" alt="De Ram Logo" class="logo-img">
+                    De <span>Ram</span>
+                </a>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" id="linkHome" data-i18n="nav.home">Home</a></li>
+                    <li><a href="menu.html" id="linkMenu" data-i18n="nav.menu">Menukaart</a></li>
+                    <li><a href="about.html" id="linkAbout" data-i18n="nav.about">Over Ons</a></li>
+                    <li><a href="fotos.html" class="active" id="linkFotos" data-i18n="nav.fotos">Foto's</a></li>
+                    <li><a href="contact.html" id="linkContact" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <div class="lang-switcher" id="langSwitcher">
+                        <button class="lang-btn active" data-lang="nl">NL</button>
+                        <button class="lang-btn" data-lang="fr">FR</button>
+                        <button class="lang-btn" data-lang="de">DE</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menu openen">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner" id="fotosBanner">
+        <div class="page-banner-bg" style="background-image: url('assets/1 (14).jpg');"></div>
+        <div class="banner-content">
+            <h1 class="banner-title font-heading" data-i18n="fotos.banner.title">Foto's & Sfeerbeelden</h1>
+            <div class="banner-breadcrumbs">
+                <a href="index.html" data-i18n="nav.home">Home</a> &nbsp;/&nbsp; <span data-i18n="fotos.breadcrumb.current">Foto's</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="section" id="gallerySection">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle text-accent" data-i18n="fotos.section.subtitle">Een Blik in Onze Zaak</span>
+                <h2 class="section-title font-heading" data-i18n="fotos.section.title">Sfeer, Ambacht & Traditie</h2>
+                <div class="title-underline"></div>
+                <p class="section-desc" data-i18n="fotos.section.desc">Proef de sfeer van De Ram alvast voor uw bezoek. Van onze rijk gevulde borden tot gezellige momenten op ons terras aan het Albertusplein.</p>
+            </div>
+
+            <!-- Gallery Filter Buttons -->
+            <div class="gallery-filters reveal">
+                <button class="gallery-filter-btn active" data-filter="all" data-i18n="fotos.filter.all">Alles</button>
+                <button class="gallery-filter-btn" data-filter="dishes" data-i18n="fotos.filter.dishes">Gerechten & Desserts</button>
+                <button class="gallery-filter-btn" data-filter="terras" data-i18n="fotos.filter.terras">Terras & Gevel</button>
+                <button class="gallery-filter-btn" data-filter="interior" data-i18n="fotos.filter.interior">Interieur & Sfeer</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="galleryGrid">
+
+                <!-- 1: Tomaat Garnaal -->
+                <div class="gallery-card reveal" data-category="dishes" data-src="assets/1 (11).jpg" data-title="Tomaat Garnaal" data-tag="Gerecht">
+                    <img src="assets/1 (11).jpg" alt="Tomaat Garnaal" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Gerecht</span>
+                        <h3 class="gallery-card-title">Tomaat Garnaal</h3>
+                    </div>
+                </div>
+
+                <!-- 2: Ossentong in Madeirasaus -->
+                <div class="gallery-card reveal" data-category="dishes" data-src="assets/1 (16).jpg" data-title="Ossentong in Madeirasaus" data-tag="Gerecht">
+                    <img src="assets/1 (16).jpg" alt="Ossentong in Madeirasaus" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Gerecht</span>
+                        <h3 class="gallery-card-title">Ossentong in Madeirasaus</h3>
+                    </div>
+                </div>
+
+                <!-- 3: Brusselse Wafel -->
+                <div class="gallery-card reveal" data-category="dishes" data-src="assets/1 (7).jpg" data-title="Brusselse Wafel met Aardbeien" data-tag="Dessert">
+                    <img src="assets/1 (7).jpg" alt="Brusselse Wafel met Aardbeien" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Dessert</span>
+                        <h3 class="gallery-card-title">Brusselse Wafel</h3>
+                    </div>
+                </div>
+
+                <!-- 4: Sfeervol Terras -->
+                <div class="gallery-card reveal" data-category="terras" data-src="assets/1 (6).jpg" data-title="Sfeervol Terras op het Albertusplein" data-tag="Terras">
+                    <img src="assets/1 (6).jpg" alt="Sfeervol Terras" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Terras</span>
+                        <h3 class="gallery-card-title">Sfeervol Terras</h3>
+                    </div>
+                </div>
+
+                <!-- 5: De Ram Verwennerij -->
+                <div class="gallery-card reveal" data-category="dishes" data-src="assets/1 (14).jpg" data-title="De Ram Tafel Verwennerij" data-tag="Gerecht">
+                    <img src="assets/1 (14).jpg" alt="De Ram Tafel Verwennerij" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Gerecht</span>
+                        <h3 class="gallery-card-title">Tafel Verwennerij</h3>
+                    </div>
+                </div>
+
+                <!-- 6: Gevel Avondsfeer -->
+                <div class="gallery-card reveal" data-category="terras" data-src="assets/google-edited.jpg" data-title="Avondsfeer aan de Basiliek" data-tag="Gevel">
+                    <img src="assets/google-edited.jpg" alt="Avondsfeer aan de Basiliek" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Gevel</span>
+                        <h3 class="gallery-card-title">Avondsfeer De Ram</h3>
+                    </div>
+                </div>
+
+                <!-- 7: Gevel overdag -->
+                <div class="gallery-card reveal" data-category="terras" data-src="assets/contact-facade.jpg" data-title="Restaurant De Ram op het Albertusplein" data-tag="Gevel">
+                    <img src="assets/contact-facade.jpg" alt="Gevel De Ram" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Gevel</span>
+                        <h3 class="gallery-card-title">Gevel Albertusplein</h3>
+                    </div>
+                </div>
+
+                <!-- 8: Authentiek Interieur -->
+                <div class="gallery-card reveal" data-category="interior" data-src="assets/1 (2).jpg" data-title="Gezellige Houten Brasserie" data-tag="Interieur">
+                    <img src="assets/1 (2).jpg" alt="Gezellige Houten Brasserie" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Interieur</span>
+                        <h3 class="gallery-card-title">Authentiek Interieur</h3>
+                    </div>
+                </div>
+
+                <!-- 9: Brasserie Traditie -->
+                <div class="gallery-card reveal" data-category="interior" data-src="assets/1 (1).jpg" data-title="Gevestigde Waarde sinds 1985" data-tag="Sfeer">
+                    <img src="assets/1 (1).jpg" alt="Gevestigde Waarde sinds 1985" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Sfeer</span>
+                        <h3 class="gallery-card-title">Gevestigde Waarde</h3>
+                    </div>
+                </div>
+
+                <!-- 10: Traditionele Bereiding -->
+                <div class="gallery-card reveal" data-category="interior" data-src="assets/1 (3).jpg" data-title="Traditionele Recepten" data-tag="Ambacht">
+                    <img src="assets/1 (3).jpg" alt="Traditionele Recepten" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Ambacht</span>
+                        <h3 class="gallery-card-title">Traditionele Recepten</h3>
+                    </div>
+                </div>
+
+                <!-- 11: Gezellige Brasserie -->
+                <div class="gallery-card reveal" data-category="interior" data-src="assets/1 (4).jpg" data-title="Gezellige Middag of Avond" data-tag="Sfeer">
+                    <img src="assets/1 (4).jpg" alt="Gezellige Middag of Avond" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Sfeer</span>
+                        <h3 class="gallery-card-title">Gezellige Middag & Avond</h3>
+                    </div>
+                </div>
+
+                <!-- 12: Menukaart Specialiteiten -->
+                <div class="gallery-card reveal" data-category="dishes" data-src="assets/1 (15).jpg" data-title="Rijke Menukaart Keuze" data-tag="Menukaart">
+                    <img src="assets/1 (15).jpg" alt="Menukaart Keuze" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Menukaart</span>
+                        <h3 class="gallery-card-title">Menukaart Specialiteiten</h3>
+                    </div>
+                </div>
+
+                <!-- 13: Huisbereid Gerecht -->
+                <div class="gallery-card reveal" data-category="dishes" data-src="assets/1 (5).jpg" data-title="Huisbereid Gerecht" data-tag="Gerecht">
+                    <img src="assets/1 (5).jpg" alt="Huisbereid Gerecht" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Gerecht</span>
+                        <h3 class="gallery-card-title">Huisbereid Gerecht</h3>
+                    </div>
+                </div>
+
+                <!-- 14: Dessert & Zoetigheden -->
+                <div class="gallery-card reveal" data-category="dishes" data-src="assets/1 (8).jpg" data-title="Artisanale Zoetigheden" data-tag="Dessert">
+                    <img src="assets/1 (8).jpg" alt="Artisanale Zoetigheden" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Dessert</span>
+                        <h3 class="gallery-card-title">Artisanale Zoetigheden</h3>
+                    </div>
+                </div>
+
+                <!-- 15: Koffie & Versnapering -->
+                <div class="gallery-card reveal" data-category="dishes" data-src="assets/1 (9).jpg" data-title="Warme Dranken & Gebak" data-tag="Dessert">
+                    <img src="assets/1 (9).jpg" alt="Warme Dranken & Gebak" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Dessert</span>
+                        <h3 class="gallery-card-title">Warme Dranken & Gebak</h3>
+                    </div>
+                </div>
+
+                <!-- 16: Klassieke Vleesschotel -->
+                <div class="gallery-card reveal" data-category="dishes" data-src="assets/1 (10).jpg" data-title="Klassiek Hoofdgerecht" data-tag="Gerecht">
+                    <img src="assets/1 (10).jpg" alt="Klassiek Hoofdgerecht" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Gerecht</span>
+                        <h3 class="gallery-card-title">Klassiek Hoofdgerecht</h3>
+                    </div>
+                </div>
+
+                <!-- 17: Verse Visbereiding -->
+                <div class="gallery-card reveal" data-category="dishes" data-src="assets/1 (12).jpg" data-title="Verse Visbereiding" data-tag="Gerecht">
+                    <img src="assets/1 (12).jpg" alt="Verse Visbereiding" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Gerecht</span>
+                        <h3 class="gallery-card-title">Verse Visbereiding</h3>
+                    </div>
+                </div>
+
+                <!-- 18: Belgische Favoriet -->
+                <div class="gallery-card reveal" data-category="dishes" data-src="assets/1 (13).jpg" data-title="Belgische Favoriet" data-tag="Gerecht">
+                    <img src="assets/1 (13).jpg" alt="Belgische Favoriet" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Gerecht</span>
+                        <h3 class="gallery-card-title">Belgische Favoriet</h3>
+                    </div>
+                </div>
+
+                <!-- 19: Bieren & Terrasvreugde -->
+                <div class="gallery-card reveal" data-category="interior" data-src="assets/1 (17).jpg" data-title="Belgische Bieren & Gezelligheid" data-tag="Sfeer">
+                    <img src="assets/1 (17).jpg" alt="Belgische Bieren & Gezelligheid" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <span class="gallery-card-tag">Sfeer</span>
+                        <h3 class="gallery-card-title">Bieren & Gezelligheid</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Sluiten">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Vorige foto"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Volgende foto"><i class="fas fa-chevron-right"></i></button>
+        
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img" id="lightboxImg">
+            <h4 class="lightbox-caption" id="lightboxCaption"></h4>
+            <span class="lightbox-counter" id="lightboxCounter"></span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <div class="logo footer-logo">
+                        <img src="assets/logo.svg" alt="De Ram Logo" class="logo-img">
+                        De <span>Ram</span>
+                    </div>
+                    <p class="footer-desc" data-i18n="footer.desc">Een warme, familiale brasserie in hartje Scherpenheuvel waar u kunt genieten van échte Belgische smaken en gulle porties.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/pages/De-Ram/152076358186743" target="_blank" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title font-heading" data-i18n="footer.nav.title">Navigatie</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="menu.html" data-i18n="nav.menu">Menukaart</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">Over Ons</a></li>
+                        <li><a href="fotos.html" data-i18n="nav.fotos">Foto's</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title font-heading" data-i18n="footer.kitchen.title">Onze Keuken</h4>
+                    <ul class="footer-links">
+                        <li><a href="menu.html?filter=warm" data-i18n="footer.kitchen.mains">Klassieke Hoofdgerechten</a></li>
+                        <li><a href="menu.html?filter=vis" data-i18n="footer.kitchen.fish">Warme Visgerechten</a></li>
+                        <li><a href="menu.html?filter=snacks" data-i18n="footer.kitchen.snacks">Snacks & Croques</a></li>
+                        <li><a href="menu.html?filter=desserts" data-i18n="footer.kitchen.desserts">Wafels & Desserts</a></li>
+                        <li><a href="menu.html?filter=dranken" data-i18n="footer.kitchen.beers">Speciaalbieren</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title font-heading" data-i18n="footer.contact.title">Contact & Info</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span data-i18n="footer.contact.address">Albertusplein 9, 3270 Scherpenheuvel</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+3213771495" data-i18n="footer.contact.phone">+32 13 77 14 95</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-calendar-times"></i>
+                        <span data-i18n="footer.contact.closedday">Vrijdag gesloten</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2026 Restaurant De Ram (BTW BE 0427.495.430). Alle rechten voorbehouden.</p>
+                <p class="footer-credit">
+                    <span data-i18n="footer.credit.pre">Website ontworpen & ontwikkeld door</span>
+                    <a href="https://www.ramyallouch.com/" target="_blank" rel="noopener">Ramy Allouch</a>
+                    <span data-i18n="footer.madewith">voor De Ram</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
+    <script src="announcement.js"></script>
+    <script src="app.js"></script>
+
+    <!-- Gallery & Lightbox Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+            const cards = Array.from(document.querySelectorAll('.gallery-card'));
+            const modal = document.getElementById('lightboxModal');
+            const modalImg = document.getElementById('lightboxImg');
+            const modalCaption = document.getElementById('lightboxCaption');
+            const modalCounter = document.getElementById('lightboxCounter');
+            const closeBtn = document.getElementById('lightboxClose');
+            const prevBtn = document.getElementById('lightboxPrev');
+            const nextBtn = document.getElementById('lightboxNext');
+
+            let visibleCards = [...cards];
+            let currentIndex = 0;
+
+            // Filter logic
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+                    visibleCards = [];
+
+                    cards.forEach(card => {
+                        const cat = card.getAttribute('data-category');
+                        if (filter === 'all' || cat === filter) {
+                            card.style.display = 'block';
+                            visibleCards.push(card);
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Lightbox functions
+            function openLightbox(index) {
+                if (visibleCards.length === 0) return;
+                currentIndex = (index + visibleCards.length) % visibleCards.length;
+                const card = visibleCards[currentIndex];
+                const src = card.getAttribute('data-src');
+                const title = card.getAttribute('data-title');
+
+                modalImg.src = src;
+                modalImg.alt = title;
+                modalCaption.textContent = title;
+                modalCounter.textContent = `${currentIndex + 1} / ${visibleCards.length}`;
+
+                modal.classList.add('active');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                modal.classList.remove('active');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+                modalImg.src = '';
+            }
+
+            function prevPhoto() {
+                openLightbox(currentIndex - 1);
+            }
+
+            function nextPhoto() {
+                openLightbox(currentIndex + 1);
+            }
+
+            // Card click
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const idx = visibleCards.indexOf(card);
+                    if (idx !== -1) openLightbox(idx);
+                });
+            });
+
+            closeBtn.addEventListener('click', closeLightbox);
+            prevBtn.addEventListener('click', (e) => { e.stopPropagation(); prevPhoto(); });
+            nextBtn.addEventListener('click', (e) => { e.stopPropagation(); nextPhoto(); });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeLightbox();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (!modal.classList.contains('active')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') prevPhoto();
+                if (e.key === 'ArrowRight') nextPhoto();
+            });
+        });
+    </script>
+</body>
+</html>
