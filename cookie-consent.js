@@ -1,3 +1,4 @@
+// De Ram Vercel build update: 2026-09-03
 // Cookie / Google Maps consent handling for De Ram website.
 // Google Maps embeds are not loaded until the visitor accepts (or interacts
 // with an individual map placeholder), per GDPR guidance on non-essential

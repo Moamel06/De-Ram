@@ -1,3 +1,4 @@
+// De Ram Vercel build update: 2026-09-03
 /**
  * announcement.js — Sanity-powered announcement banner
  *

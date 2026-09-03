@@ -1,3 +1,4 @@
+// De Ram Vercel build update: 2026-09-03
 // Auto-generated translations for De Ram website. Hardcoded, hand-translated (not machine-translated via API).
 const translations = {
   nl: {
