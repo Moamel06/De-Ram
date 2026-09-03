@@ -389,7 +389,7 @@ const translations = {
     "menu.subsection.wijnen": "Wijnen",
     "meta.about.description": "Ontdek het verhaal achter Restaurant De Ram. Leer meer over onze passie voor de Belgische keuken, onze geschiedenis op het Albertusplein en onze filosofie.",
     "meta.about.title": "Over Ons | De Ram Scherpenheuvel",
-    "meta.index.description": "Welkom bij Restaurant De Ram in Scherpenheuvel. Geniet van onze klassieke Belgische keuken, royale porties stoofvlees, vol-au-vent en heerlijke wafels op ons gezellig terras.",
+    "meta.index.description": "Geniet bij Restaurant De Ram in Scherpenheuvel van klassieke Vlaamse gerechten, royale porties stoofvlees, vol-au-vent en verse Brusselse wafels op het terras.",
     "meta.index.title": "De Ram | Klassiek Belgisch Restaurant & Brasserie Scherpenheuvel",
     "meta.menu.description": "Bekijk de uitgebreide menukaart van Restaurant De Ram. Geniet van authentieke Belgische hoofdgerechten, diverse croques, Brusselse wafels en speciaalbieren.",
     "meta.menu.title": "Menukaart | De Ram Scherpenheuvel",
