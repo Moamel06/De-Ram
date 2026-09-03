@@ -551,7 +551,7 @@
                     </div>
                     <p class="footer-desc" data-i18n="footer.desc">Een warme, familiale brasserie in hartje Scherpenheuvel waar u kunt genieten van échte Belgische smaken en gulle porties.</p>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/pages/De-Ram/152076358186743" target="_blank" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/pages/De-Ram/152076358186743" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
 
@@ -601,14 +601,28 @@
 
             <div class="footer-bottom">
                 <p data-i18n="footer.copyright">© 2026 Restaurant De Ram (BTW BE 0427.495.430). Alle rechten voorbehouden.</p>
+                <p><a href="privacy.html" class="text-accent" style="margin-right: 14px;">Privacyverklaring</a><a href="voorwaarden.html" class="text-accent">Algemene voorwaarden</a></p>
                 <p><span data-i18n="footer.credit.pre">Website ontworpen & ontwikkeld door</span> <a href="https://studiotm.be/" target="_blank" rel="noopener noreferrer" class="text-accent" style="font-weight: 600;">TM Studio</a></p>
             </div>
         </div>
     </footer>
 
+    <!-- Cookie / Google Maps consent banner -->
+    <div id="cookieBanner" class="cookie-banner" hidden>
+        <p class="cookie-banner-text">
+            <span data-i18n="cookie.banner.text.pre">Deze website gebruikt een ingesloten Google Maps-kaart om onze locatie te tonen. Google kan hierbij cookies plaatsen. Meer info in onze</span>
+            <a href="privacy.html" data-i18n="cookie.banner.text.link">privacyverklaring</a><span data-i18n="cookie.banner.text.post">.</span>
+        </p>
+        <div class="cookie-banner-actions">
+            <button type="button" id="cookieDeclineBtn" class="cookie-banner-btn decline" data-i18n="cookie.banner.decline">Weigeren</button>
+            <button type="button" id="cookieAcceptBtn" class="cookie-banner-btn accept" data-i18n="cookie.banner.accept">Accepteren</button>
+        </div>
+    </div>
+
     <!-- Custom JS -->
     <script src="translations.js"></script>
     <script src="i18n.js"></script>
+    <script src="cookie-consent.js"></script>
     <script src="app.js"></script>
     <script src="announcement.js"></script>
 </body>

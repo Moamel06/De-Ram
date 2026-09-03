@@ -341,7 +341,7 @@
                         </div>
                     </div>
 
-                    <a href="https://www.google.com/maps/place/De+Ram/@50.9797084,4.9744621,710m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47c1412f7ce0e7e5:0xe4428aa9a03508ab!8m2!3d50.9797051!4d4.977037!16s%2Fg%2F1v4k5nr5" target="_blank" class="btn btn-secondary" id="mapsLinkBtn"><i class="fa-solid fa-map-location-dot" style="margin-right: 8px;"></i> <span data-i18n="info.btn.directions">Routebeschrijving</span></a>
+                    <a href="https://www.google.com/maps/place/De+Ram/@50.9797084,4.9744621,710m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47c1412f7ce0e7e5:0xe4428aa9a03508ab!8m2!3d50.9797051!4d4.977037!16s%2Fg%2F1v4k5nr5" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="mapsLinkBtn"><i class="fa-solid fa-map-location-dot" style="margin-right: 8px;"></i> <span data-i18n="info.btn.directions">Routebeschrijving</span></a>
                 </div>
 
                 <div class="hours-table reveal" style="transition-delay: 0.2s;">
@@ -380,7 +380,12 @@
             </div>
 
             <div class="map-wrapper reveal" style="transition-delay: 0.3s;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2511.082260655184!2d4.9744621!3d50.9797051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c1412f7ce0e7e5%3A0xe4428aa9a03508ab!2sDe%20Ram!5e0!3m2!1snl!2sbe!4v1700000000000!5m2!1snl!2sbe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Maps De Ram Scherpenheuvel"></iframe>
+                <div class="map-consent-overlay">
+                    <i class="fas fa-map-location-dot"></i>
+                    <p data-i18n="cookie.map.placeholder.title">Google Maps-kaart</p>
+                    <button type="button" class="map-consent-btn" data-i18n="cookie.map.placeholder.btn">Klik om de kaart te laden</button>
+                </div>
+                <iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2511.082260655184!2d4.9744621!3d50.9797051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c1412f7ce0e7e5%3A0xe4428aa9a03508ab!2sDe%20Ram!5e0!3m2!1snl!2sbe!4v1700000000000!5m2!1snl!2sbe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Maps De Ram Scherpenheuvel"></iframe>
             </div>
         </div>
     </section>
@@ -396,7 +401,7 @@
                     </div>
                     <p class="footer-desc" data-i18n="footer.desc">Een warme, familiale brasserie in hartje Scherpenheuvel waar u kunt genieten van échte Belgische smaken en gulle porties.</p>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/pages/De-Ram/152076358186743" target="_blank" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/pages/De-Ram/152076358186743" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
 
@@ -446,14 +451,28 @@
 
             <div class="footer-bottom">
                 <p data-i18n="footer.copyright">© 2026 Restaurant De Ram (BTW BE 0427.495.430). Alle rechten voorbehouden.</p>
+                <p><a href="privacy.html" class="text-accent" style="margin-right: 14px;">Privacyverklaring</a><a href="voorwaarden.html" class="text-accent">Algemene voorwaarden</a></p>
                 <p><span data-i18n="footer.credit.pre">Website ontworpen & ontwikkeld door</span> <a href="https://studiotm.be/" target="_blank" rel="noopener noreferrer" class="text-accent" style="font-weight: 600;">TM Studio</a></p>
             </div>
         </div>
     </footer>
 
+    <!-- Cookie / Google Maps consent banner -->
+    <div id="cookieBanner" class="cookie-banner" hidden>
+        <p class="cookie-banner-text">
+            <span data-i18n="cookie.banner.text.pre">Deze website gebruikt een ingesloten Google Maps-kaart om onze locatie te tonen. Google kan hierbij cookies plaatsen. Meer info in onze</span>
+            <a href="privacy.html" data-i18n="cookie.banner.text.link">privacyverklaring</a><span data-i18n="cookie.banner.text.post">.</span>
+        </p>
+        <div class="cookie-banner-actions">
+            <button type="button" id="cookieDeclineBtn" class="cookie-banner-btn decline" data-i18n="cookie.banner.decline">Weigeren</button>
+            <button type="button" id="cookieAcceptBtn" class="cookie-banner-btn accept" data-i18n="cookie.banner.accept">Accepteren</button>
+        </div>
+    </div>
+
     <!-- Custom JS -->
     <script src="translations.js"></script>
     <script src="i18n.js"></script>
+    <script src="cookie-consent.js"></script>
     <script src="app.js"></script>
     <script src="announcement.js"></script>
 </body>
