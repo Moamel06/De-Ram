@@ -76,7 +76,8 @@
   // ──────────────────────────────────────────────
   function sanitise(text, maxLength) {
     if (typeof text !== 'string') return '';
-    return text.trim().slice(0, maxLength);
+    const cleaned = text.trim().slice(0, maxLength);
+    return cleaned.replace(/\bsezien\b/gi, 'seizoen').replace(/\bseizien\b/gi, 'seizoen');
   }
 
   // ──────────────────────────────────────────────
