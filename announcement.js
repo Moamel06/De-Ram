@@ -33,9 +33,10 @@
     '*[_type == "announcement" && isActive == true] | order(_updatedAt desc)[0]{ title, description }'
   );
 
-  // Build the public CDN URL (read-only, no token needed)
-  const API_URL =
-    `https://${SANITY_PROJECT_ID}.apicdn.sanity.io/v${SANITY_API_VERSION}/data/query/${SANITY_DATASET}?query=${QUERY}`;
+  // Build the API URL (proxied via /api/announcement on Vercel to avoid CORS issues)
+  const API_URL = (typeof window !== 'undefined' && window.location && window.location.protocol.startsWith('http'))
+    ? '/api/announcement'
+    : `https://${SANITY_PROJECT_ID}.apicdn.sanity.io/v${SANITY_API_VERSION}/data/query/${SANITY_DATASET}?query=${QUERY}`;
 
   // ──────────────────────────────────────────────
   //  DOM references
@@ -110,12 +111,7 @@
   async function loadAnnouncement() {
     try {
       const response = await fetch(API_URL);
-
-      if (!response.ok) {
-        // Network error or Sanity is down — fail silently
-        console.warn('[Announcement] Sanity API returned status', response.status);
-        return;
-      }
+      if (!response.ok) return;
 
       const json = await response.json();
       const data = json.result;

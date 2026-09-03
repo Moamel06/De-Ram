@@ -1,5 +1,4 @@
 /* De Ram Vercel build update: 2026-09-03 */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
     --bg-primary: #0a0a0c;
@@ -817,8 +816,10 @@ header.scrolled .logo-img {
     margin-top: 3px;
 }
 
+.info-text h3,
 .info-text h4 {
     font-size: 1rem;
+    font-weight: 600;
     margin-bottom: 4px;
 }
 
@@ -1739,8 +1740,10 @@ textarea {
     border: 1px solid rgba(var(--accent-rgb), 0.25);
 }
 
+.author-info h3,
 .author-info h4 {
     font-size: 1.05rem;
+    font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 2px;
 }
