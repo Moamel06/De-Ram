@@ -1,4 +1,4 @@
-// De Ram Vercel build update: 2026-09-03
+// De Ram Vercel build update: 2026-09-03 v2
 // i18n runtime for De Ram website.
 // Applies translations from translations.js to elements marked with [data-i18n].
 // Persists the visitor's language choice across pages via localStorage.
