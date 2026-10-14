@@ -1,4 +1,4 @@
-// De Ram Vercel build update: 2026-09-03 v2
+// De Ram Vercel build update: 2026-10-14
 document.addEventListener('DOMContentLoaded', () => {
     // Header scroll effect
     const header = document.querySelector('header');
